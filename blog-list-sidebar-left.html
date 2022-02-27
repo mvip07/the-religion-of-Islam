@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gsore | Grocery and Organic Food Shop HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ::::::::::::::Favicon icon::::::::::::::-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+
+    <!-- ::::::::::::::All CSS Files here :::::::::::::: -->
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/vendor/plaza-icon.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    
+    <!-- Plugin CSS Files -->
+    <link rel="stylesheet" href="assets/css/plugin/slick.css">
+    <link rel="stylesheet" href="assets/css/plugin/material-scrolltop.css">
+    <link rel="stylesheet" href="assets/css/plugin/price_range_style.css">
+    <link rel="stylesheet" href="assets/css/plugin/in-number.css">
+    <link rel="stylesheet" href="assets/css/plugin/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/plugin/jquery.lineProgressbar.css">
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css"/>
+    <link rel="stylesheet" href="assets/css/plugin/plugins.min.css"/>
+    <link rel="stylesheet" href="assets/css/main.min.css"> -->
+
+    <!-- Main Style CSS File -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <header>
+        <!--  Start Large Header Section   -->
+        <div class="header d-none d-lg-block">
+            <!-- Start Header Top area -->
+            <div class="header__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="header__top-content d-flex justify-content-between align-items-center">
+                                <div class="header__top-content--left">
+                                    <span>Free Delivery: Take advantage of our time to save event</span>
+                                </div>
+                                <ul class="header__top-content--right user-set-role d-flex">
+                                    <li class="user-currency pos-relative">
+                                        <a class="user-set-role__button" href="#" data-bs-toggle="dropdown" aria-expanded="false">Select Language<i class="fal fa-chevron-down"></i></a>
+                                        <ul class="expand-dropdown-menu dropdown-menu" >
+                                            <li><a href="#"><img src="assets/img/icon/flag/icon_uzb.png" alt="" width="20px">Uzb</a></li>
+                                            <li><a href="#"><img src="assets/img/icon/flag/icon_usa.png" alt="" width="20px">English</a></li>
+                                            <li><a href="#"><img src="assets/img/icon/flag/icon_rus.png" alt="" width="20px">Rus</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Start Header Top area -->
+
+            <!-- Start Header Center area -->
+            <div class="header__center sticky-header p-tb-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                            <!-- Start Logo -->
+                            <div class="header__logo">
+                                <a href="index.html" class="header__logo-link img-responsive">
+                                    <img class="header__logo-img img-fluid" src="assets/img/logo/logo.png" alt="">
+                                </a>
+                            </div> <!-- End Logo -->
+                             <!-- Start Header Menu -->
+                             <div class="header-menu">
+                                <nav>
+                                    <ul class="header__nav">
+                                        <!--Start Single Nav link-->
+                                        <li class="header__nav-item pos-relative">
+                                            <a href="index.html" class="header__nav-link">Home</a>
+                                        </li> 
+                                        <li class="header__nav-item pos-relative">
+                                            <a href="about.html" class="header__nav-link">About Us<i class="fal fa-chevron-down"></i></a>
+                                        </li> 
+                                        <li class="header__nav-item pos-relative">
+                                            <a href="blog-list-sidebar-left.html" class="header__nav-link">Blogs<i class="fal fa-chevron-down"></i></a>
+                                        </li>
+                        
+                                        <li class="header__nav-item pos-relative">
+                                            <a href="contact.html" class="header__nav-link">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div> 
+                            <ul class="header__user-action-icon">
+                                <li>
+                                    <a href="my-account.html">
+                                        <i class="icon-users"></i>
+                                    </a>
+                                </li> 
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Header Center area -->
+
+             <!-- Start Header bottom area -->
+             <div class="header__bottom p-tb-30">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-xl-7 col-lg-6">
+                            <form class="header-search" action="#" method="post">
+                                <div class="header-search__content pos-relative">
+                                    <input type="search" name="header-search" placeholder="Search our store" required>
+                                    <button class="pos-absolute" type="submit"><i class="icon-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xl-5 col-lg-6">
+                            <div class="header-phone text-center"><span>Call Us: +998 91 166 21 25</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Header bottom area -->
+            
+        </div> <!--  End Large Header Section  -->
+
+        <!--  Start Mobile Header Section   -->
+        <div class="header__mobile mobile-header--1 d-block d-lg-none p-tb-20">
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+                        <ul class="header__mobile--leftside d-flex align-items-center justify-content-start">
+                            <li>
+                                <div class="header__mobile-logo">
+                                    <a href="index.html" class="header__mobile-logo-link">
+                                        <img src="assets/img/logo/logo.png" alt="" class="header__mobile-logo-img">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Start User Action -->
+                        <ul class="header__mobile--rightside header__user-action-icon  d-flex align-items-center justify-content-end"> 
+                            <li>
+                                <a href="#offcanvas-add-cart__box" class="offcanvas-toggle">
+                                    <i class="icon-users"></i>
+                                </a>
+                            </li> <!-- End Header Add Cart Box -->
+                            <li><a href="#offcanvas-mobile-menu" class="offcanvas-toggle"><i class="far fa-bars"></i></a></li>
+
+                        </ul>   <!-- End User Action -->
+                    </div>
+                </div>
+            </div>
+        </div> <!--  Start Mobile Header Section   -->
+
+        <!--  Start Mobile-offcanvas Menu Section   -->
+        <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+            <div class="offcanvas__top">
+                <span class="offcanvas__top-text"></span>
+                <button class="offcanvas-close"><i class="fal fa-times"></i></button>
+            </div>
+            
+            <div class="offcanvas-inner">
+                <ul class="user-set-role d-flex justify-content-between m-tb-15">
+                    <li class="user-currency pos-relative">
+                        <a class="user-set-role__button font--medium fs-6" href="#" data-bs-toggle="dropdown" aria-expanded="false">Select Language<i class="fal fa-chevron-down"></i></a>
+                        <ul class="expand-dropdown-menu dropdown-menu" >
+                            <li><a href="#"><img src="assets/img/icon/flag/icon_uzb.png" alt="" width="20px">Uzb</a></li>
+                            <li><a href="#"><img src="assets/img/icon/flag/icon_usa.png" alt="" width="20px">English</a></li>
+                            <li><a href="#"><img src="assets/img/icon/flag/icon_rus.png" alt="" width="20px">Rus</a></li>
+                        </ul>
+                    </li>
+        
+                </ul>
+                <form class="header-search m-tb-15" action="#" method="post">
+                    <div class="header-search__content pos-relative">
+                        <input type="search" name="header-search" placeholder="Search our store" required>
+                        <button class="pos-absolute" type="submit"><i class="icon-search"></i></button>
+                    </div>
+                </form>
+                
+                <div class="offcanvas-menu">
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="about.html"><span>About Us</span></a></li>
+                        <li><a href="blog-list-sidebar-left.html"><span>Blogs</span></a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="offcanvas__social-nav m-t-50">
+                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i class="fab fa-youtube"></i></a></li>
+                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i class="fab fa-google-plus-g"></i></a></li>
+                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i class="fab fa-telegram"></i></a></li>
+            </ul>
+        </div> <!--  End Mobile-offcanvas Menu Section   -->
+        
+    </header>
+
+    <!-- ::::::  Start  Breadcrumb Section  ::::::  -->
+    <div class="page-breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="page-breadcrumb__menu">
+                        <li class="page-breadcrumb__nav"><a href="#">Home</a></li>
+                        <li class="page-breadcrumb__nav active">Blog</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> <!-- ::::::  End  Breadcrumb Section  ::::::  -->
+
+    <!-- :::::: Start Main Container Wrapper :::::: -->
+    <main id="main-container" class="main-container">
+        <div class="container">
+            <div class="row flex-column-reverse flex-lg-row">
+                <!-- Start Leftside - Sidebar Widgets -->
+                <div class="col-lg-3">
+                    <div class="sidebar">
+                        <!-- Start Single Sidebar Widget - Custom Menu -->
+                        <div class="sidebar__widget">
+                            <div class="sidebar__box">
+                                <h5 class="sidebar__title">CUSTOM MENU</h5>
+                            </div>
+                            <ul class="sidebar__menu">
+                                <li><a href="#">Search Terms</a></li>
+                                <li><a href="#">Advanced Search</a></li>
+                                <li><a href="#">Helps & Faqs</a></li>
+                                <li><a href="#">Store Location</a></li>
+                                <li><a href="#">Orders & Returns</a></li>
+                                <li><a href="#">Deliveries</a></li>
+                                <li><a href="#">Refund & Returns</a></li>
+                            </ul>
+                        </div>  <!-- End Single Sidebar Widget - Custom Menu -->
+
+                        <!-- Start Single Sidebar Widget - Recent Post -->
+                        <div class="sidebar__widget">
+                            <div class="sidebar__box">
+                                <h5 class="sidebar__title">Recent Post</h5>
+                            </div>
+                            <ul class="sidebar__post-blog list-space--small">
+                                <li class="d-flex align-items-center ">
+                                    <a class="sidebar__post-img img-responsive" href="#">
+                                        <img src="assets/img/product/size-small/product-home-1-img-1.jpg" alt="">
+                                    </a>
+                                    <div class="sidebar__post-content">
+                                        <span class="d-block color-gray">Jul 23, 2020</span>
+                                        <a class="link--gray" href="">Consectetur adipi...</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <a class="sidebar__post-img img-responsive" href="#">
+                                        <img src="assets/img/product/size-small/product-home-1-img-2.jpg" alt="">
+                                    </a>
+                                    <div class="sidebar__post-content">
+                                        <span class="d-block color-gray">Jul 16, 2020</span>
+                                        <a class="link--gray" href="">Without Very Dark...</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>                         
+                    </div>
+                </div> 
+
+                <div class="col-lg-9">
+                    <div class="blog">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="blog__type-list">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="blog__img"><a href=""><img src="assets/img/blog/feed/blog-feed-home-1-img-1.jpg" alt=""></a></div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="blog__content">
+                                                <a class="link--gray" href=""><h3 class="blog__title">Consectetur Adipisicing</h3></a>
+                                                <div class="blog__archive m-t-20">
+                                                    <a href="#" class="link--gray link--icon-left m-r-30"><i class="far fa-calendar"></i> Oct 29, 2021</a>
+                                            <a href="#" class="link--gray link--icon-left"><i class="far fa-user"></i>Ismoiljonov Yakhyo</a>
+                                                </div>
+                                                <div class="para m-tb-20">
+                                                    <p class="para__text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus expedita quo voluptate, esse ratione facilis quibusdam vel ad, quas ut reiciendis neque voluptates adipisci laborum, dolor saepe natus.
+                                                    </p>
+                                                </div>
+                                                <a class="btn btn--radius btn--small btn--black btn--black-hover-green" href="#">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-12">
+                                <div class="blog__type-list">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="inner-slider inner-slider-grid-1 pos-relative">
+                                                <div class="blog__img"><img src="assets/img/blog/feed/blog-feed-home-1-img-2.jpg" alt=""></div>
+                                                <div class="blog__img"><img src="assets/img/blog/feed/blog-feed-home-1-img-1.jpg" alt=""></div>
+                                                <div class="blog__img"><img src="assets/img/blog/feed/blog-feed-home-1-img-3.jpg" alt=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="blog__content">
+                                                <a href=""><h3 class="blog__title">Without Very Darkness</h3></a>
+                                                <div class="blog__archive m-t-20">
+                                                    <a href="#" class="link--gray link--icon-left m-r-30"><i class="far fa-calendar"></i> Jul 1, 2022</a>
+                                            <a href="#" class="link--gray link--icon-left"><i class="far fa-user"></i>Ismoiljonov Yakhyo</a>
+                                                </div>
+                                                <div class="para m-tb-20">
+                                                    <p class="para__text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus expedita quo voluptate, esse ratione facilis quibusdam vel ad, quas ut reiciendis neque voluptates adipisci laborum, dolor saepe natus.
+                                                    </p>
+                                                </div>
+                                                <a class="btn btn--radius btn--small btn--black btn--black-hover-green" href="#">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div> <!-- End Single Blog List -->
+                            <!-- Start Single Blog List -->
+                            <div class="col-12">
+                                <div class="blog__type-list">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="blog__img">
+                                                <div class="blog__video pos-relative">
+                                                    <img src="assets/img/blog/feed/blog-feed-home-1-img-4.jpg" alt="">
+                                                    <a class="popup-icon vinobox-popup pos-absolute" data-autoplay="true" data-vbtype="video" href="https://youtu.be/QQHLGlB4Dpk?list=PLk25BQFrj7wHgCkzPuejFXJTiFIam-MVq"><i class="fal fa-play"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="blog__content">
+                                                <a href=""><h3 class="blog__title">How to Diet Properly</h3></a>
+                                                <div class="blog__archive m-t-20">
+                                                    <a href="#" class="link--gray link--icon-left m-r-30"><i class="far fa-calendar"></i> Mar 3, 2021</a>
+                                                    <a href="#" class="link--gray link--icon-left"><i class="far fa-user"></i>Akbarov Akbar</a>
+                                                </div>
+                                                <div class="para m-tb-20">
+                                                    <p class="para__text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus expedita quo voluptate, esse ratione facilis quibusdam vel ad, quas ut reiciendis neque voluptates adipisci laborum, dolor saepe natus.
+                                                    </p>
+                                                </div>
+                                                <a class="btn btn--radius btn--small btn--black btn--black-hover-green" href="#">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div> <!-- End Single Blog List -->
+                            <!-- Start Single Blog List -->
+                            <div class="col-12">
+                                <div class="blog__type-list">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="blog__img">
+                                                <img src="assets/img/blog/feed/blog-feed-home-1-img-4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="blog__content">
+                                                <a class="link--gray" href=""><h3 class="blog__title">Remaining Essential Foods</h3></a>
+                                                <div class="blog__archive m-t-20">
+                                                    <a href="#" class="link--gray link--icon-left m-r-30"><i class="far fa-calendar"></i> Feb 11, 2020</a>
+                                                    <a href="#" class="link--gray link--icon-left"><i class="far fa-user"></i> Ozodov Mirabzal</a>
+                                                </div>
+                                                <div class="para m-tb-20">
+                                                    <p class="para__text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus expedita quo voluptate, esse ratione facilis quibusdam vel ad, quas ut reiciendis neque voluptates adipisci laborum, dolor saepe natus.
+                                                    </p>
+                                                </div>
+                                                <a class="btn btn--radius btn--small btn--black btn--black-hover-green" href="#">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </main> 
+
+    <footer class="footer m-t-100">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-5">
+                        <div class="footer__about">
+                            <div class="footer__logo">
+                                <a href="index.html" class="footer__logo-link">
+                                    <img src="assets/img/logo/logo.png" alt="" class="footer__logo-img">
+                                </a>
+                            </div>
+                            <ul class="footer__address">
+                                <li class="footer__address-item"><i class="fa fa-home"></i>No: 58 A, your Street, Baltimore, USA 4508</li>
+                                <li class="footer__address-item"><i class="fa fa-phone-alt"></i>+998 91 166 21 25</li>
+                                <li class="footer__address-item"><i class="fa fa-envelope"></i>mirabzalozodov07@gmail.com</li>
+                            </ul>
+                            <ul class="footer__social-nav">
+                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a></li>
+                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a></li>
+                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                        <!-- Start Footer Nav -->  
+                        <div class="footer__menu">
+                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">INFORMATION</h4>
+                            <ul class="footer__nav">
+                                <li class="footer__list"><a href="" class="footer__link">Delivery Information</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Advanced Search</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Helps & Faqs</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Store Location</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Orders & Returns</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Deliveries</a></li>
+                                <li class="footer__list"><a href="" class="footer__link"> Refund & Returns</a></li>
+                            </ul>
+                        </div> <!-- End Footer Nav --> 
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                        <div class="footer__menu">
+                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">OUR COMPANY</h4>
+                            <ul class="footer__nav">
+                                <li class="footer__list"><a href="" class="footer__link">Delivery</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Legal Notice</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Sitemap</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Secure payment</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Blog</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">About us</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Carrers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                        <div class="footer__menu">
+                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">MY ACCOUNT</h4>
+                            <ul class="footer__nav">
+                                <li class="footer__list"><a href="" class="footer__link">Search Terms</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Advanced Search</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Helps & Faqs</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Store Location</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Orders & Returns</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Deliveries</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Refund & Returns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                        <div class="footer__menu">
+                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">OPENING TIME</h4>
+                            <ul class="footer__nav">
+                                <li class="footer__list">Mon - Fri: 8AM - 10PM</li>
+                                <li class="footer__list">Sat: 9AM-8PM</li>
+                                <li class="footer__list">Suns: 14hPM-18hPM</li>
+                                <li class="footer__list">Mon - Fri: 8AM - 10PM</li>
+                                <li class="footer__list">We Work All The Holidays</li>
+                                <li class="footer__list"><a href="" class="footer__link font--bold">Download our app</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </footer> 
+    
+    <button class="material-scrolltop" type="button"></button>
+    <!-- <div class="modal fade" id="modalAddCart" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col text-end">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"> <i class="fal fa-times"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="modal__product-img">
+                                        <img class="img-fluid" src="assets/img/product/size-normal/product-home-1-img-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="link--green link--icon-left"><i class="fal fa-check-square"></i>Added to cart successfully!</div>
+                                    <div class="modal__product-cart-buttons m-tb-15">
+                                        <a href="cart.html" class="btn btn--box  btn--tiny btn--green btn--green-hover-black btn--uppercase">View Cart</a>
+                                        <a href="checkout.html" class="btn btn--box  btn--tiny btn--green btn--green-hover-black btn--uppercaset">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 modal__border">
+                            <ul class="modal__product-shipping-info">
+                                <li class="link--icon-left"><i class="icon-shopping-cart"></i> There Are 5 Items In Your Cart.</li>
+                                <li>TOTAL PRICE: <span>$187.00</span></li>
+                                <li><a href="#" class="btn text-underline color-green" data-bs-dismiss="modal">CONTINUE SHOPPING</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>  -->
+
+    <!-- <div class="modal fade" id="modalQuickView" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col text-end">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"> <i class="fal fa-times"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="product-gallery-box m-b-60">
+                                    <div class="modal-product-image--large">
+                                        <img class="img-fluid" src="assets/img/product/gallery/gallery-large/product-gallery-large-1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="product-details-box">
+                                    <h5 class="title title--normal m-b-20">Aliquam lobortis</h5>
+                                    <div class="product__price">
+                                        <span class="product__price-del">$35.90</span>
+                                        <span class="product__price-reg">$31.69</span>
+                                    </div>
+                                    <ul class="product__review m-t-15">
+                                        <li class="product__review--fill"><i class="icon-star"></i></li>
+                                        <li class="product__review--fill"><i class="icon-star"></i></li>
+                                        <li class="product__review--fill"><i class="icon-star"></i></li>
+                                        <li class="product__review--fill"><i class="icon-star"></i></li>
+                                        <li class="product__review--blank"><i class="icon-star"></i></li>
+                                    </ul>
+                                    <div class="product__desc m-t-25 m-b-30">
+                                        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will</p>
+                                    </div>
+
+                                    <div class="product-var p-t-30">
+                                        <div class="product-quantity product-var__item d-flex align-items-center flex-wrap">
+                                            <span class="product-var__text">Quantity: </span>
+                                            <form class="modal-quantity-scale m-l-20">
+                                                <div class="value-button" id="modal-decrease" onclick="decreaseValueModal()" >-</div>
+                                                <input type="number" id="modal-number" value="1" />
+                                                <div class="value-button" id="modal-increase" onclick="increaseValueModal()" >+</div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-links">
+                                        <div class="product-social m-tb-30">
+                                            <span>SHARE THIS PRODUCT</span>
+                                            <ul class="product-social-link">
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/jquery-ui.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugins JS Files -->
+    <script src="assets/js/plugin/slick.min.js"></script>
+    <script src="assets/js/plugin/jquery.countdown.min.js"></script>
+    <script src="assets/js/plugin/material-scrolltop.js"></script>
+    <script src="assets/js/plugin/price_range_script.js"></script>
+    <script src="assets/js/plugin/in-number.js"></script>
+    <script src="assets/js/plugin/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script src="assets/js/plugin/venobox.min.js"></script>
+    <script src="assets/js/plugin/jquery.waypoints.js"></script>
+    <script src="assets/js/plugin/jquery.lineProgressbar.js"></script>
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <!-- <script src="assets/js/vendor/vendor.min.js"></script>
+    <script src="assets/js/plugin/plugins.min.js"></script> -->
+
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
