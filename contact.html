@@ -4,12 +4,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Gsore | Grocery and Organic Food Shop HTML Template</title>
+    <title>Weather-and-prayer-times</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- ::::::::::::::Favicon icon::::::::::::::-->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <link href="assets/img/icon.png" rel="shortcut icon" type="image/png">
 
     <!-- ::::::::::::::All CSS Files here :::::::::::::: -->
 
@@ -28,20 +28,27 @@
     <link rel="stylesheet" href="assets/css/plugin/jquery.lineProgressbar.css">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin="" />
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
+<style>
+    .header__logo-link {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
 <body>
-    <header>
-        <!--  Start Large Header Section   -->
-        <div class="header d-none d-lg-block">
-            <!-- Start Header Top area -->
-            <div class="header__top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
+<header>
+    <!--  Start Large Header Section   -->
+    <div class="header d-none d-lg-block">
+        <!-- Start Header Top area -->
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
                             <div class="header__top-content d-flex justify-content-between align-items-center">
                                 <div class="header__top-content--left">
                                     <span>Free Delivery: Take advantage of our time to save event</span>
@@ -70,7 +77,7 @@
                             <!-- Start Logo -->
                             <div class="header__logo">
                                 <a href="index.html" class="header__logo-link img-responsive">
-                                    <img class="header__logo-img img-fluid" src="assets/img/logo/logo.png" alt="">
+                                    <img alt="" class="header__logo-img img-fluid w-75" src="assets/img/logo/logo.jpg">
                                 </a>
                             </div> <!-- End Logo -->
                              <!-- Start Header Menu -->
@@ -136,7 +143,7 @@
                             <li>
                                 <div class="header__mobile-logo">
                                     <a href="index.html" class="header__mobile-logo-link">
-                                        <img src="assets/img/logo/logo.png" alt="" class="header__mobile-logo-img">
+                                        <img alt="" class="header__mobile-logo-img w-50" src="assets/img/logo/logo.jpg">
                                     </a>
                                 </div>
                             </li>
@@ -287,28 +294,28 @@
                         <div class="section-content">
                             <h5 class="section-content__title">Get In Touch</h5>
                         </div>
-                        <form class="contact-form-style" id="contact-form" action="#" method="POST">
+                        <form action="#" class="form contact-form-style" onsubmit="return false">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-box__single-group">
-                                        <input class="name" type="text" placeholder="Name" required>
+                                        <input class="name" placeholder="Name" type="text">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                   <div class="form-box__single-group">
-                                        <input type="email" placeholder="Email" required class="email">
+                                    <div class="form-box__single-group">
+                                        <input class="email" placeholder="Email" type="email">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                    <div class="form-box__single-group">
-                                        <input type="text" placeholder="Subject" required class="subject">
+                                       <input class="subject" placeholder="Subject" type="text">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-box__single-group">
-                                        <textarea rows="10" placeholder="Your Messege" required class="messege"></textarea>
+                                        <textarea class="msg" placeholder="Your Messege" rows="10"></textarea>
                                     </div>
-                                    <button class="btn btn--box btn--medium btn--radius-tiny btn--black btn--black-hover-green btn--uppercase font--bold m-t-30" type="submit" class="submit">Send</button>
+                                    <button class="btnSubmit btn btn--box btn--medium btn--radius-tiny btn--black btn--black-hover-green btn--uppercase font--bold m-t-30 " type="submit">Send</button>
                                 </div>
                             </div>
                         </form>
@@ -320,14 +327,13 @@
 
     <footer class="footer m-t-100">
         <div class="container">
-            <!-- Start Footer Top Section --> 
             <div class="footer__top">
                 <div class="row">
                     <div class="col-lg-4 col-md-5">
                         <div class="footer__about">
                             <div class="footer__logo">
                                 <a href="index.html" class="footer__logo-link">
-                                    <img src="assets/img/logo/logo.png" alt="" class="footer__logo-img">
+                                    <img alt="" class="footer__logo-img" src="assets/img/logo/logo.jpg">
                                 </a>
                             </div>
                             <ul class="footer__address">
@@ -429,9 +435,14 @@
     <script src="assets/js/plugin/jquery.waypoints.js"></script>
     <script src="assets/js/plugin/jquery.lineProgressbar.js"></script> -->
 
+<script src="./assets/js/contact.js"></script>
 
-    <script src="assets/js/main.js"></script>
-    <script src="./assets/js/index.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/index.js"></script>
+
+
 </body>
 
 </html>

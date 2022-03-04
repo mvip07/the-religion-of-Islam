@@ -2112,7 +2112,7 @@ button.close {
 .page-breadcrumb {
     background: #ebebeb;
     text-align: center;
-    padding: 75px 0 75px 0px;
+    padding: 20px 0 20px 0px;
     margin-bottom: 60px;
 }
 
@@ -4626,7 +4626,7 @@ input.round-input {
 }
 
 .footer__logo-img {
-    width: 150px;
+    width: 100px;
     height: auto;
 }
 
