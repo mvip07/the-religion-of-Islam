@@ -53,7 +53,7 @@ let dd_aa_yyyy = `${year}-${month}-${day}`
 geo.getCurrentPosition(function (position) {
     const {longitude, latitude} = position.coords
 
-    fetch(`https://api.pray.zone/v2/times/dates.json?longitude=${longitude}&latitude=${latitude}&elevation=333&start=${dd_aa_yyyy}&end=2022-03-11`)
+    fetch(`https://api.pray.zone/v2/times/dates.json?longitude=${longitude}&latitude=${latitude}&elevation=333&start=${dd_aa_yyyy}&end=2022-03-13`)
         .then((response) => response.json())
         .then(prayer => {
 
