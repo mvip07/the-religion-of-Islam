@@ -3768,7 +3768,7 @@ input.round-input {
 }
 
 .team-single:hover .team-social {
-    bottom: 0px;
+    bottom: 0;
     opacity: 1;
     visibility: visible;
 }
