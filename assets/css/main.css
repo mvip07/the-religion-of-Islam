@@ -2527,7 +2527,8 @@ button.close {
     border: 1px solid #ebebeb !important;
 }
 
-.product-image--large .img-fluid {
+.product-image--large,
+.img-fluid {
     max-width: 100% !important;
 }
 
@@ -3791,12 +3792,6 @@ input.round-input {
 .header__logo-link,
 .header__mobile-logo-link {
     display: block;
-}
-
-.header__logo-img,
-.header__mobile-logo-img {
-    width: 100%;
-    height: auto;
 }
 
 .user-set-role li {
