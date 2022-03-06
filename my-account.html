@@ -32,6 +32,10 @@
     <link rel="stylesheet" href="assets/css/plugin/plugins.min.css"/>
     <link rel="stylesheet" href="assets/css/main.min.css"> -->
 
+    <link crossorigin="" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          rel="stylesheet"/>
+
     <!-- Main Style CSS File -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -227,10 +231,12 @@
                             <div class="col-xl-3 col-md-4">
                                 <div class="my-account-menu">
                                     <ul class="nav account-menu-list flex-column nav-pills" id="pills-tab" role="tablist">
+
                                         <li>
-                                            <a class="active link--icon-left" id="pills-dashboard-tab" data-bs-toggle="pill" href="#pills-login"
-                                                role="tab" aria-controls="pills-dashboard" aria-selected="true"><i class="fas fa-sign-in"></i>   Login</a>
+                                            <a aria-controls="pills-login" aria-selected="false" class="link--icon-left" data-bs-toggle="pill" href="#pills-login"
+                                               id="pills-login-tab" role="tab"><i class="far fa-sign-in"></i> Login</a>
                                         </li>
+
                                         <li>
                                             <a id="pills-order-tab" class="link--icon-left" data-bs-toggle="pill" href="#pills-order" role="tab"
                                                 aria-controls="pills-order" aria-selected="false"><i class="far fa-registered"></i> Register</a>
@@ -239,11 +245,6 @@
                                             <a id="pills-address-tab" class="link--icon-left" data-bs-toggle="pill" href="#pills-address" role="tab"
                                                 aria-controls="pills-address" aria-selected="false"><i
                                                     class="fas fa-map-marker-alt"></i> Address</a>
-                                        </li>
-                                        <li>
-                                            <a id="pills-account-tab" class="link--icon-left" data-bs-toggle="pill" href="#pills-account" role="tab"
-                                                aria-controls="pills-account" aria-selected="false"><i class="fas fa-user"></i>
-                                                Account Details</a>
                                         </li>
                                         <li>
                                             <a id="pills-logout-tab" class="link--icon-left" data-bs-toggle="pill" href="#pills-logout" role="tab"
@@ -255,8 +256,8 @@
                             </div>
                             <div class="col-xl-8 col-md-8">
                                 <div class="tab-content my-account-tab" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-dashboard" role="tabpanel"
-                                        aria-labelledby="pills-dashboard-tab">
+                                    <div aria-labelledby="pills-login-tab" class="tab-pane fade show active" id="pills-login"
+                                         role="tabpanel">
                                         <div class="my-account-dashboard account-wrapper">
                                             <div class="col-lg-12 col-12">
                                                 <div class="login-form-container">
@@ -317,102 +318,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-download" role="tabpanel"
-                                        aria-labelledby="pills-download-tab">
-                                        <div class="my-account-download account-wrapper">
-                                            <h4 class="account-title">Download</h4>
-                                            <div class="account-table text-center m-t-30 table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="name">Product</th>
-                                                            <th class="date">Date</th>
-                                                            <th class="status">Expire</th>
-                                                            <th class="action">Download</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Mostarizing Oil</td>
-                                                            <td>Aug 22, 2020</td>
-                                                            <td>Yes</td>
-                                                            <td><a href="#">Download File</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Katopeno Altuni</td>
-                                                            <td>July 22, 2020</td>
-                                                            <td>Never</td>
-                                                            <td><a href="#">Download File</a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div class="tab-pane fade" id="pills-address" role="tabpanel"
                                         aria-labelledby="pills-address-tab">
                                         <div class="my-account-address account-wrapper">
                                             <h4 class="account-title">Payment Method</h4>
                                             <div class="account-address m-t-30">
-                                                <h6 class="name">Alex Tuntuni</h6>
-                                                <p>1355 Market St, Suite 900 <br> San Francisco, CA 94103</p>
-                                                <p>Mobile: (123) 456-7890</p>
-                                                <a class="box-btn m-t-25 " href="#"><i class="far fa-edit"></i> Edit Address</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-account" role="tabpanel"
-                                        aria-labelledby="pills-account-tab">
-                                        <div class="my-account-details account-wrapper">
-                                            <h4 class="account-title">Account Details</h4>
+                                                <div class="map" id="map">
 
-                                            <div class="account-details">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-box__single-group">
-                                                            <input type="text" placeholder="First Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-box__single-group">
-                                                            <input type="text" placeholder="Last Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="form-box__single-group">
-                                                            <input type="text" placeholder="Display Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="form-box__single-group">
-                                                            <input type="text" placeholder="Email address">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="form-box__single-group">
-                                                            <h5 class="title">Password change</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="form-box__single-group">
-                                                            <input type="password" placeholder="Current Password">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-box__single-group">
-                                                            <input type="password" placeholder="New Password">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-box__single-group">
-                                                            <input type="password" placeholder="Confirm Password">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-box__single-group">
-                                                            <button class="btn btn--box btn--radius btn--small btn--black btn--black-hover-green btn--uppercase font--bold">Save Change</button>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -524,6 +437,7 @@
 
     <button class="material-scrolltop" type="button"></button>
 
+
     <!-- Vendor JS Files -->
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
     <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
@@ -531,7 +445,7 @@
     <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
 
     <!-- Plugins JS Files -->
-    <!-- <script src="assets/js/plugin/slick.min.js"></script>
+    <script src="assets/js/plugin/slick.min.js"></script>
     <script src="assets/js/plugin/jquery.countdown.min.js"></script>
     <script src="assets/js/plugin/material-scrolltop.js"></script>
     <script src="assets/js/plugin/price_range_script.js"></script>
@@ -539,14 +453,20 @@
     <script src="assets/js/plugin/jquery.elevateZoom-3.0.8.min.js"></script>
     <script src="assets/js/plugin/venobox.min.js"></script>
     <script src="assets/js/plugin/jquery.waypoints.js"></script>
-    <script src="assets/js/plugin/jquery.lineProgressbar.js"></script> -->
+    <script src="assets/js/plugin/jquery.lineProgressbar.js"></script>
+
+    <script crossorigin=""
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">
+    </script>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
     <!-- <script src="assets/js/vendor/vendor.min.js"></script>
     <script src="assets/js/plugin/plugins.min.js"></script> -->
 
     <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/account.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

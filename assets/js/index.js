@@ -114,7 +114,7 @@ geo.getCurrentPosition(function (position) {
         })
 })
 
-let map = document.querySelector("#map")
+let map = document.querySelectorAll("#map")
 geo.getCurrentPosition(function (position) {
 
     const {latitude, longitude} = position.coords
