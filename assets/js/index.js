@@ -54,7 +54,7 @@ geo.getCurrentPosition(function (position) {
   const { longitude, latitude } = position.coords;
 
   fetch(
-    `https://api.pray.zone/v2/times/dates.json?longitude=${longitude}&latitude=${latitude}&elevation=333&start=${dd_aa_yyyy}&end=2022-03-31`
+    `https://api.pray.zone/v2/times/dates.json?longitude=${longitude}&latitude=${latitude}&elevation=333&start=${dd_aa_yyyy}&end=2022-05-31`
   )
     .then((response) => response.json())
     .then((prayer) => {
