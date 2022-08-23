@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTPS} on
+RewriteRule (.*) http://%{HTTP_HOST}%{"http://api.alquran.cloud/v1/quran/quran-uthmani"}
