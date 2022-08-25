@@ -52,7 +52,7 @@ geo.getCurrentPosition(function (position) {
   const { longitude, latitude } = position.coords;
 
   fetch(
-    `http://api.aladhan.com/v1/calendarByAddress?address=%20${latitude},%20${longitude}&method=2&month=${month}&year=${year}`
+    `http://api.aladhan.com/v1/calendarByAddress?address=%20${latitude},%20${longitude}&method=2&month=${month}&year=${year}/:splat 200!`
   )
     .then((response) => response.json())
     .then((prayer) => {
