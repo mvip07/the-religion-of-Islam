@@ -117,7 +117,7 @@ geo.getCurrentPosition(function (position) {
 let map = document.querySelectorAll("#map");
 geo.getCurrentPosition(function (position) {
   const { latitude, longitude } = position.coords;
-  map = L.map("map").setView([latitude, longitude], 15);
+  map = L?.map("map").setView([latitude, longitude], 15);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
