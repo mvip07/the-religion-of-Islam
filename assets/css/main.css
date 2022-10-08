@@ -7072,10 +7072,15 @@ table tbody > tr td a:hover {
 .border-top-1 {
   border-top: 1px solid #ddd;
 }
-.accordion {
-  position: relative;
-  border: 1px solid #999;
+
+@media (min-width: 1200px) {
+  .accordion {
+    padding: 0 150px;
+    position: relative;
+    border: 1px solid #999;
+  }
 }
+
 .contentBx {
   position: relative;
 }
@@ -7091,13 +7096,14 @@ table tbody > tr td a:hover {
   color: #0c63e4;
   background-color: #e7f1ff;
   border: 1px solid #dee2e6;
+  text-align: right;
 }
 
 .contentBx .label::before {
   content: "+";
   position: absolute;
   top: 50%;
-  right: 20px;
+  left: 20px;
   transform: translateY(-50%);
   font-size: 1.5rem;
 }

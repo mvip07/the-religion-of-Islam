@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather-and-prayer-times</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ::::::::::::::Favicon icon::::::::::::::-->
+    <link href="assets/img/logo/minlogo.png" rel="shortcut icon" type="image/png">
+
+    <!-- ::::::::::::::All CSS Files here :::::::::::::: -->
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/vendor/plaza-icon.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+
+    <!-- Plugin CSS Files -->
+    <link rel="stylesheet" href="assets/css/plugin/slick.css">
+    <link rel="stylesheet" href="assets/css/plugin/material-scrolltop.css">
+    <link rel="stylesheet" href="assets/css/plugin/price_range_style.css">
+    <link rel="stylesheet" href="assets/css/plugin/in-number.css">
+    <link rel="stylesheet" href="assets/css/plugin/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/plugin/jquery.lineProgressbar.css">
+
+    <link crossorigin="" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        rel="stylesheet" />
+
+    <!-- Main Style CSS File -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="./assets/js/arquran.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!--  Start Large Header Section   -->
+        <div class="header d-none d-lg-block">
+            <!-- Start Header Top area -->
+            <div class="header__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="header__top-content d-flex justify-content-between align-items-center">
+                                <div class="header__top-content--left">
+                                    <span>Free Delivery: Take advantage of our time to save event</span>
+                                </div>
+                                <ul class="header__top-content--right user-set-role d-flex">
+                                    <li class="user-currency pos-relative">
+                                        <a class="user-set-role__button" href="#" data-bs-toggle="dropdown"
+                                            aria-expanded="false">Select Language<i class="fal fa-chevron-down"></i></a>
+                                        <ul class="expand-dropdown-menu dropdown-menu">
+                                            <li><a href="#"><img src="assets/img/icon/flag/icon_uzb.png" alt=""
+                                                        width="20px">Uzb</a></li>
+                                            <li><a href="#"><img src="assets/img/icon/flag/icon_usa.png" alt=""
+                                                        width="20px">English</a></li>
+                                            <li><a href="#"><img src="assets/img/icon/flag/icon_rus.png" alt=""
+                                                        width="20px">Rus</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Start Header Top area -->
+
+            <!-- Start Header Center area -->
+            <div class="header__center sticky-header p-tb-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                            <!-- Start Logo -->
+                            <div class="header__logo">
+                                <a class="header__logo-link img-responsive" href="index.html">
+                                    <img alt="" class="header__logo-img img-fluid w-50 "
+                                        src="./assets/img/logo/maxlogo.png">
+                                </a>
+                            </div>
+                            <!-- Start Header Menu -->
+                            <div class="header-menu">
+                                <nav>
+                                    <ul class="header__nav">
+                                        <!--Start Single Nav link-->
+                                        <li class="header__nav-item pos-relative">
+                                            <a href="index.html" class="header__nav-link">Home</a>
+                                        </li>
+                                        <li class="header__nav-item pos-relative">
+                                            <a href="about.html" class="header__nav-link">About Us<i
+                                                    class="fal fa-chevron-down"></i></a>
+                                        </li>
+                                        <li class="header__nav-item pos-relative">
+                                            <a href="blog-list-sidebar-left.html" class="header__nav-link">Blogs<i
+                                                    class="fal fa-chevron-down"></i></a>
+                                        </li>
+
+                                        <li class="header__nav-item pos-relative">
+                                            <a href="contact.html" class="header__nav-link">Contact Us</a>
+                                        </li>
+
+                                        <li class="header__nav-item pos-relative">
+                                            <a href="arquran.html" class="header__nav-link">The Holy Quran</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <ul class="header__user-action-icon">
+                                <li>
+                                    <a href="my-account.html">
+                                        <i class="icon-users"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Header Center area -->
+
+            <!-- Start Header bottom area -->
+            <div class="header__bottom p-tb-30">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-xl-7 col-lg-6">
+                            <form class="header-search" action="#" method="post">
+                                <div class="header-search__content pos-relative">
+                                    <input type="search" name="header-search" placeholder="Search our store" required>
+                                    <button class="pos-absolute" type="submit"><i class="icon-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xl-5 col-lg-6">
+                            <div class="header-phone text-center"><span>Call Us: +998 91 166 21 25</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Header bottom area -->
+
+        </div> <!--  End Large Header Section  -->
+
+        <!--  Start Mobile Header Section   -->
+        <div class="header__mobile mobile-header--1 d-block d-lg-none p-tb-20">
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+                        <ul class="header__mobile--leftside d-flex align-items-center justify-content-start">
+                            <li>
+                                <div class="header__mobile-logo">
+                                    <a href="index.html" class="header__mobile-logo-link">
+                                        <img alt="" class="header__logo-img img-fluid w-50 "
+                                            src="assets/img/logo/maxlogo.png">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Start User Action -->
+                        <ul
+                            class="header__mobile--rightside header__user-action-icon  d-flex align-items-center justify-content-end">
+                            <li>
+                                <a href="#offcanvas-add-cart__box" class="offcanvas-toggle">
+                                    <a href="my-account.html"><i class="icon-users"></i></a>
+                                </a>
+                            </li> <!-- End Header Add Cart Box -->
+                            <li><a href="#offcanvas-mobile-menu" class="offcanvas-toggle"><i
+                                        class="far fa-bars"></i></a></li>
+
+                        </ul> <!-- End User Action -->
+                    </div>
+                </div>
+            </div>
+        </div> <!--  Start Mobile Header Section   -->
+
+        <!--  Start Mobile-offcanvas Menu Section   -->
+        <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+            <div class="offcanvas__top">
+                <span class="offcanvas__top-text"></span>
+                <button class="offcanvas-close"><i class="fal fa-times"></i></button>
+            </div>
+
+            <div class="offcanvas-inner">
+                <ul class="user-set-role d-flex justify-content-between m-tb-15">
+                    <li class="user-currency pos-relative">
+                        <a class="user-set-role__button font--medium fs-6" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">Select Language<i class="fal fa-chevron-down"></i></a>
+                        <ul class="expand-dropdown-menu dropdown-menu">
+                            <li><a href="#"><img src="assets/img/icon/flag/icon_uzb.png" alt="" width="20px">Uzb</a>
+                            </li>
+                            <li><a href="#"><img src="assets/img/icon/flag/icon_usa.png" alt="" width="20px">English</a>
+                            </li>
+                            <li><a href="#"><img src="assets/img/icon/flag/icon_rus.png" alt="" width="20px">Rus</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="header-search m-tb-15" action="#" method="post">
+                    <div class="header-search__content pos-relative">
+                        <input type="search" name="header-search" placeholder="Search our store" required>
+                        <button class="pos-absolute" type="submit"><i class="icon-search"></i></button>
+                    </div>
+                </form>
+
+                <div class="offcanvas-menu">
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="about.html"><span>About Us</span></a></li>
+                        <li><a href="blog-list-sidebar-left.html"><span>Blogs</span></a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="arquran.html">The Holy Quran</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="offcanvas__social-nav m-t-50">
+                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i
+                            class="fab fa-youtube"></i></a></li>
+                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i
+                            class="fab fa-google-plus-g"></i></a></li>
+                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i
+                            class="fab fa-telegram"></i></a></li>
+            </ul>
+        </div> <!--  End Mobile-offcanvas Menu Section   -->
+
+    </header>
+
+    <div class="page-breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="page-breadcrumb__menu">
+                        <li class="page-breadcrumb__nav"><a href="#">Home</a></li>
+                        <li class="page-breadcrumb__nav active">My Account</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <main id="main-container" class="main-container d-flex justify-content-center">
+        <div class="accordion" id="accordionExample">
+        </div>
+    </main>
+
+    <footer class="footer m-t-100">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-5">
+                        <div class="footer__about">
+                            <div class="footer__logo">
+                                <a href="index.html" class="footer__logo-link">
+                                    <img alt="" class="footer__logo-img" src="assets/img/logo/maxlogo.png">
+                                </a>
+                            </div>
+                            <ul class="footer__address">
+                                <li class="footer__address-item"><i class="fa fa-home"></i>Uzb Tashkent Shayxantaxur
+                                </li>
+                                <li class="footer__address-item"><i class="fa fa-phone-alt"></i>+998 91 166 21 25</li>
+                                <li class="footer__address-item"><i class="fa fa-envelope"></i>support@somemail.com</li>
+                            </ul>
+                            <ul class="footer__social-nav">
+                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i
+                                            class="fab fa-youtube"></i></a></li>
+                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i
+                                            class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                        <!-- Start Footer Nav -->
+                        <div class="footer__menu">
+                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">
+                                INFORMATION</h4>
+                            <ul class="footer__nav">
+                                <li class="footer__list"><a href="" class="footer__link">Delivery Information</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Advanced Search</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Helps & Faqs</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Store Location</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Orders & Returns</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Deliveries</a></li>
+                                <li class="footer__list"><a href="" class="footer__link"> Refund & Returns</a></li>
+                            </ul>
+                        </div> <!-- End Footer Nav -->
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                        <div class="footer__menu">
+                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">OUR
+                                COMPANY</h4>
+                            <ul class="footer__nav">
+                                <li class="footer__list"><a href="" class="footer__link">Delivery</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Legal Notice</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Sitemap</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Secure payment</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Blog</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">About us</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Carrers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                        <div class="footer__menu">
+                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">MY ACCOUNT
+                            </h4>
+                            <ul class="footer__nav">
+                                <li class="footer__list"><a href="" class="footer__link">Search Terms</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Advanced Search</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Helps & Faqs</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Store Location</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Orders & Returns</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Deliveries</a></li>
+                                <li class="footer__list"><a href="" class="footer__link">Refund & Returns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                        <div class="footer__menu">
+                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">OPENING
+                                TIME</h4>
+                            <ul class="footer__nav">
+                                <li class="footer__list">Mon - Fri: 8AM - 10PM</li>
+                                <li class="footer__list">Sat: 9AM-8PM</li>
+                                <li class="footer__list">Suns: 14hPM-18hPM</li>
+                                <li class="footer__list">Mon - Fri: 8AM - 10PM</li>
+                                <li class="footer__list">We Work All The Holidays</li>
+                                <li class="footer__list"><a href="" class="footer__link font--bold">Download our app</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="material-scrolltop" type="button"></button>
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/jquery-ui.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugins JS Files -->
+    <script src="assets/js/plugin/slick.min.js"></script>
+    <script src="assets/js/plugin/jquery.countdown.min.js"></script>
+    <script src="assets/js/plugin/material-scrolltop.js"></script>
+    <script src="assets/js/plugin/price_range_script.js"></script>
+    <script src="assets/js/plugin/in-number.js"></script>
+    <script src="assets/js/plugin/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script src="assets/js/plugin/venobox.min.js"></script>
+    <script src="assets/js/plugin/jquery.waypoints.js"></script>
+    <script src="assets/js/plugin/jquery.lineProgressbar.js"></script>
+
+    <script crossorigin=""
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">
+        </script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
