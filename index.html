@@ -1,418 +1,281 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Hello -->
-<head>
-    <meta charset="UTF-8">
-    <title>Weather-and-prayer-times</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather and Prayer times</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
     <!-- ::::::::::::::Favicon icon::::::::::::::-->
-    <link href="assets/img/logo/minlogo.png" rel="shortcut icon" type="image/png">
+    <link
+      href="./assets/img/logo/minlogo.png"
+      rel="shortcut icon"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="./assets/css/vendor/fontawesome.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
 
-
-    <!-- ::::::::::::::All CSS Files here :::::::::::::: -->
-
-    <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/vendor/plaza-icon.css">
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-
-    <!-- Plugin CSS Files -->
-    <link rel="stylesheet" href="assets/css/plugin/slick.css">
-    <link rel="stylesheet" href="assets/css/plugin/material-scrolltop.css">
-    <link rel="stylesheet" href="assets/css/plugin/price_range_style.css">
-    <link rel="stylesheet" href="assets/css/plugin/in-number.css">
-    <link rel="stylesheet" href="assets/css/plugin/venobox.min.css">
-    <link rel="stylesheet" href="assets/css/plugin/jquery.lineProgressbar.css">
-
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-
-<body>
+  <body>
     <header>
-    <!--  Start Large Header Section   -->
-    <div class="header d-none d-lg-block">
-        <!-- Start Header Top area -->
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="header__top-content d-flex justify-content-between align-items-center">
-                            <div class="header__top-content--left">
-                                <span>Free Delivery: Take advantage of our time to save event</span>
-                            </div>
-                            <ul class="header__top-content--right user-set-role d-flex">
-                                <li class="user-currency pos-relative">
-                                    <a class="user-set-role__button" href="#" data-bs-toggle="dropdown" aria-expanded="false">Select Language<i class="fal fa-chevron-down"></i></a>
-                                    <ul class="expand-dropdown-menu dropdown-menu">
-                                        <li><a href="#"><img src="assets/img/icon/flag/icon_uzb.png" alt="" width="20px">Uzb</a></li>
-                                            <li><a href="#"><img src="assets/img/icon/flag/icon_usa.png" alt="" width="20px">English</a></li>
-                                            <li><a href="#"><img src="assets/img/icon/flag/icon_rus.png" alt="" width="20px">Rus</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- Start Header Top area -->
+      <div class="header__container">
+        <div class="header__logo">
+          <a class="header__logo-link" href="index.html">
+            <img
+              alt=""
+              class="header__logo-img"
+              src="./assets/img/logo/maxlogo.png"
+            />
+          </a>
+        </div>
+        <nav>
+          <ul class="header__nav">
+            <!--Start Single Nav link-->
+            <li class="header__nav-item">
+              <a href="index.html" class="header__nav-link">Home</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="about.html" class="header__nav-link">About Us</a>
+            </li>
 
-            <!-- Start Header Center area -->
-            <div class="header__center sticky-header p-tb-10">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 d-flex justify-content-between align-items-center">
-                            <!-- Start Logo -->
-                            <div class="header__logo">
-                                <a class="header__logo-link img-responsive" href="index.html">
-                                    <img alt="" class="header__logo-img img-fluid w-50 " src="./assets/img/logo/maxlogo.png">
-                                </a>
-                            </div>
-                             <!-- Start Header Menu -->
-                             <div class="header-menu">
-                                <nav>
-                                    <ul class="header__nav">
-                                        <!--Start Single Nav link-->
-                                        <li class="header__nav-item pos-relative">
-                                            <a href="index.html" class="header__nav-link">Home</a>
-                                        </li> 
-                                        <li class="header__nav-item pos-relative">
-                                            <a href="about.html" class="header__nav-link">About Us<i class="fal fa-chevron-down"></i></a>
-                                        </li> 
-                                        <li class="header__nav-item pos-relative">
-                                            <a href="blog-list-sidebar-left.html" class="header__nav-link">Blogs<i class="fal fa-chevron-down"></i></a>
-                                        </li>
-                        
-                                        <li class="header__nav-item pos-relative">
-                                            <a href="contact.html" class="header__nav-link">Contact Us</a>
-                                        </li>
+            <li class="header__nav-item">
+              <a href="contact.html" class="header__nav-link">Contact Us</a>
+            </li>
 
-                                        <li class="header__nav-item pos-relative">
-                                            <a href="arquran.html" class="header__nav-link">The Holy Quran</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div> 
-                            <ul class="header__user-action-icon">
-                                <li>
-                                    <a href="my-account.html">
-                                        <i class="icon-users"></i>
-                                    </a>
-                                </li> 
-                            </ul> 
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- End Header Center area -->
+            <li class="header__nav-item">
+              <a href="arquran.html" class="header__nav-link">The Holy Quran</a>
+            </li>
+          </ul>
+        </nav>
 
-             <!-- Start Header bottom area -->
-             <div class="header__bottom p-tb-30">
-                <div class="container">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-xl-7 col-lg-6">
-                            <form class="header-search" action="#" method="post">
-                                <div class="header-search__content pos-relative">
-                                    <input type="search" name="header-search" placeholder="Search our store" required>
-                                    <button class="pos-absolute" type="submit"><i class="icon-search"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-xl-5 col-lg-6">
-                            <div class="header-phone text-center"><span>Call Us: +998 91 166 21 25</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- End Header bottom area -->
-            
-        </div> <!--  End Large Header Section  -->
+        <ul class="header__user-action-icon"></ul>
+      </div>
 
-        <!--  Start Mobile Header Section   -->
-        <div class="header__mobile mobile-header--1 d-block d-lg-none p-tb-20">
-            <div class="container-fluid">
-                <div class="row ">
-                    <div class="col-12 d-flex align-items-center justify-content-between">
-                        <ul class="header__mobile--leftside d-flex align-items-center justify-content-start">
-                            <li>
-                                <div class="header__mobile-logo">
-                                    <a href="index.html" class="header__mobile-logo-link">
-                                        <img alt="" class="header__logo-img img-fluid w-50 " src="assets/img/logo/maxlogo.png">
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                        <!-- Start User Action -->
-                        <ul class="header__mobile--rightside header__user-action-icon  d-flex align-items-center justify-content-end"> 
-                            <li>
-                                <a href="#offcanvas-add-cart__box" class="offcanvas-toggle">
-                                    <a href="my-account.html"><i class="icon-users"></i></a>
-                                </a>
-                            </li> <!-- End Header Add Cart Box -->
-                            <li><a href="#offcanvas-mobile-menu" class="offcanvas-toggle"><i class="far fa-bars"></i></a></li>
+      <div class="header__mobile">
+        <div class="container-fluid">
+          <div class="header__mobile-logo">
+            <a href="index.html" class="header__mobile-logo-link">
+              <img
+                alt=""
+                class="header__logo-img"
+                src="assets/img/logo/maxlogo.png"
+              />
+            </a>
+          </div>
+          <a href="#" class="offcanvas-toggle">
+            <i class="far fa-bars"></i>
+          </a>
+        </div>
+      </div>
 
-                        </ul>   <!-- End User Action -->
-                    </div>
-                </div>
-            </div>
-        </div> <!--  Start Mobile Header Section   -->
+      <div class="offcanvas">
+        <button class="offcanvas-close">
+          <i class="fal fa-times"></i>
+        </button>
 
-        <!--  Start Mobile-offcanvas Menu Section   -->
-        <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
-            <div class="offcanvas__top">
-                <span class="offcanvas__top-text"></span>
-                <button class="offcanvas-close"><i class="fal fa-times"></i></button>
-            </div>
-            
-            <div class="offcanvas-inner">
-                <ul class="user-set-role d-flex justify-content-between m-tb-15">
-                    <li class="user-currency pos-relative">
-                        <a class="user-set-role__button font--medium fs-6" href="#" data-bs-toggle="dropdown" aria-expanded="false">Select Language<i class="fal fa-chevron-down"></i></a>
-                        <ul class="expand-dropdown-menu dropdown-menu" >
-                            <li><a href="#"><img src="assets/img/icon/flag/icon_uzb.png" alt="" width="20px">Uzb</a></li>
-                            <li><a href="#"><img src="assets/img/icon/flag/icon_usa.png" alt="" width="20px">English</a></li>
-                            <li><a href="#"><img src="assets/img/icon/flag/icon_rus.png" alt="" width="20px">Rus</a></li>
-                        </ul>
-                    </li>
-        
-                </ul>
-                <form class="header-search m-tb-15" action="#" method="post">
-                    <div class="header-search__content pos-relative">
-                        <input type="search" name="header-search" placeholder="Search our store" required>
-                        <button class="pos-absolute" type="submit"><i class="icon-search"></i></button>
-                    </div>
-                </form>
-                
-                <div class="offcanvas-menu">
-                    <ul>
-                        <li><a href="index.html"><span>Home</span></a></li>
-                        <li><a href="about.html"><span>About Us</span></a></li>
-                        <li><a href="blog-list-sidebar-left.html"><span>Blogs</span></a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="arquran.html">The Holy Quran</a></li>
-                    </ul>
-                </div>
-            </div>
-            <ul class="offcanvas__social-nav m-t-50">
-                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i class="fab fa-twitter"></i></a></li>
-                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i class="fab fa-youtube"></i></a></li>
-                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i class="fab fa-google-plus-g"></i></a></li>
-                <li class="offcanvas__social-list"><a href="#" class="offcanvas__social-link"><i class="fab fa-telegram"></i></a></li>
+        <div class="offcanvas-inner">
+          <div class="offcanvas-menu">
+            <ul>
+              <li class="header__nav-item">
+                <a href="index.html" class="header__nav-link">Home</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="about.html" class="header__nav-link">About Us</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="contact.html" class="header__nav-link">Contact Us</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="arquran.html" class="header__nav-link"
+                  >The Holy Quran</a
+                >
+              </li>
             </ul>
-        </div> <!--  End Mobile-offcanvas Menu Section   -->
-        
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main id="main-container" class="main-container">
-        <!-- ::::::  Start Hero Section  ::::::  -->
-        <div class="hero slider-dot-fix slider-dot slider-dot-fix slider-dot--center slider-dot-size--medium slider-dot-circle  slider-dot-style--fill slider-dot-style--fill-white-active-green dot-gap__X--10">
-            <!-- Start Single Hero Slide -->
-            <div class="hero-slider">
-                <img src="https://p4.wallpaperbetter.com/wallpaper/134/37/127/seasons-spring-summer-winter-wallpaper-preview.jpg" alt="">
-            </div>
-            <div class="hero-slider">
-                <img src="https://wi.wallpapertip.com/wsimgs/234-2342073_namaz-images-wallpaper.jpg" alt="">
-            </div> 
-        </div> 
-  
-        <div class="banner m-t-30">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 col-12">
-                        <div class="banner__box">
-                            <div class="banner__box--single banner__box--single-text-style-1 pos-relative">
-                                <img src="http://connector.ae/dynamicimages/Newsletter-May-14-Ramadan.jpg" alt="" class="banner__img">
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="banner__box">
-                            <div class="banner__box--single banner__box--single-text-style-1 pos-relative">
-                                <img src="https://gnatj.com/wp-content/uploads/2014/06/wallpaper.jpg" alt="" class="banner__img">  
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
-        <div class="product m-t-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                         <!-- Start Section Title -->
-                        <div class="section-content section-content--border m-b-35">
-                            <h5 class="section-content__title">Top weather data</h5>
-                        </div>  
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="product__catagory"></div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-        <div class="product m-t-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-content section-content--border m-b-35">
-                            <h5 class="section-content__title">Top prayer times information</h5> 
-                            <!-- <ul class="tablist tablist--style-blue tablist--style-gap-20 nav">
-                                <li><a class="nav-link active" data-bs-toggle="tab" href="#fruits">Fruites</a></li>
-                                <li><a class="nav-link" data-bs-toggle="tab" href="#milk">Milk</a></li>
-                                <li><a class="nav-link" data-bs-toggle="tab" href="#fish">Fish</a></li>
-                            </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="tab-content tab-animate-zoom">
-                            <div class="tab-pane show active" id="fruits">
-                                <div class="default-slider default-slider--hover-bg-red product-default-slider">
-                                    <div class="product-default-slider text-center" id="product-default-slider">
-                                        
-                                    </div>
-                                </div>
-                            </div>                        
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <main class="main-container">
+      <div class="hero">
+        <div class="hero-slider">
+          <img
+            src="https://p4.wallpaperbetter.com/wallpaper/134/37/127/seasons-spring-summer-winter-wallpaper-preview.jpg"
+            alt=""
+          />
         </div>
-         <div class="banner m-t-100 pos-relative">
-            <div class="banner__bg">
-                <img src="https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701755138.jpg" alt="">
-            </div>
-            <div class="banner__box banner__box--single-text-style-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="banner__content banner__content--center pos-absolute">
-                                <h6 class="banner__title  font--medium m-b-10">SPECIAL DISCOUNT</h6>
-                                <h2 class="banner__title banner__title--large font--regular text-capitalize">Allows you to track <br> weekly weather and prayer times 
-                                    products</h2>
-                                <h6 class="banner__title font--medium m-b-40">It will create a wide range of conveniences for you</h6>
-                                <span class="btn btn--large btn--radius btn--black btn--black-hover-green font--bold text-uppercase">Shop now</span>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-            </div>    
-        </div> 
-    </main> 
+      </div>
 
-    <footer class="footer m-t-100">
-        <div class="container">
-            <div class="footer__top">
-                <div class="row">
-                    <div class="col-lg-4 col-md-5">
-                        <div class="footer__about">
-                            <div class="footer__logo">
-                                <a href="index.html" class="footer__logo-link">
-                                    <img alt="" class="footer__logo-img" src="assets/img/logo/maxlogo.png">
-                                </a>
-                            </div>
-                            <ul class="footer__address">
-                                <li class="footer__address-item"><i class="fa fa-home"></i>Uzb, Tahkent Shayxontahur tuman</li>
-                                <li class="footer__address-item"><i class="fa fa-phone-alt"></i>+998 91 166 21 25</li>
-                                <li class="footer__address-item"><i class="fa fa-envelope"></i>mirabzalozodov07@gmail.com</li>
-                            </ul>
-                            <ul class="footer__social-nav">
-                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a></li>
-                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a></li>
-                                <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-google-plus-g"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
-                        <!-- Start Footer Nav -->  
-                        <div class="footer__menu">
-                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">INFORMATION</h4>
-                            <ul class="footer__nav">
-                                <li class="footer__list"><a href="" class="footer__link">Delivery Information</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Advanced Search</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Helps & Faqs</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Store Location</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Orders & Returns</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Deliveries</a></li>
-                                <li class="footer__list"><a href="" class="footer__link"> Refund & Returns</a></li>
-                            </ul>
-                        </div> <!-- End Footer Nav --> 
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
-                        <div class="footer__menu">
-                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">OUR COMPANY</h4>
-                            <ul class="footer__nav">
-                                <li class="footer__list"><a href="" class="footer__link">Delivery</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Legal Notice</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Sitemap</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Secure payment</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Blog</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">About us</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Carrers</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
-                        <div class="footer__menu">
-                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">MY ACCOUNT</h4>
-                            <ul class="footer__nav">
-                                <li class="footer__list"><a href="" class="footer__link">Search Terms</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Advanced Search</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Helps & Faqs</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Store Location</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Orders & Returns</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Deliveries</a></li>
-                                <li class="footer__list"><a href="" class="footer__link">Refund & Returns</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
-                        <div class="footer__menu">
-                            <h4 class="footer__nav-title footer__nav-title--dash footer__nav-title--dash-red">OPENING TIME</h4>
-                            <ul class="footer__nav">
-                                <li class="footer__list">Mon - Fri: 8AM - 10PM</li>
-                                <li class="footer__list">Sat: 9AM-8PM</li>
-                                <li class="footer__list">Suns: 14hPM-18hPM</li>
-                                <li class="footer__list">Mon - Fri: 8AM - 10PM</li>
-                                <li class="footer__list">We Work All The Holidays</li>
-                                <li class="footer__list"><a href="#" class="footer__link font--bold">Download our app</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="weather">
+        <div class="section-content">
+          <h5 class="section-content__title">Weather times are 8 days</h5>
         </div>
-    </footer> 
-    <button class="material-scrolltop" type="button"></button>
 
-    <script src="./assets/js/index.js" defer ></script>
+        <div class="weather__catagory"></div>
+      </div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
-    <script src="assets/js/vendor/jquery-ui.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+      <div class="prayer">
+        <div class="section-content">
+          <h5 class="section-content__title">Prayer times are 30 days</h5>
+        </div>
+        <div class="prayer-day-choose">
+          <button class="today">Today</button>
+          <button class="month">Month</button>
+          <select class="select"></select>
+        </div>
+        <div class="prayer-default-slider"></div>
+      </div>
+    </main>
+    <div class="loader">
+      <div>M</div>
+      <div>V</div>
+      <div>I</div>
+      <div>P</div>
+    </div>
 
-    <!-- Plugins JS Files -->
-    <script src="assets/js/plugin/slick.min.js"></script>
-    <script src="assets/js/plugin/jquery.countdown.min.js"></script>
-    <script src="assets/js/plugin/material-scrolltop.js"></script>
-    <script src="assets/js/plugin/price_range_script.js"></script>
-    <script src="assets/js/plugin/in-number.js"></script>
-    <script src="assets/js/plugin/jquery.elevateZoom-3.0.8.min.js"></script>
-    <script src="assets/js/plugin/venobox.min.js"></script>
-    <script src="assets/js/plugin/jquery.waypoints.js"></script>
-    <script src="assets/js/plugin/jquery.lineProgressbar.js"></script>
-
-    <script src="assets/js/main.js"></script>  
-</body>
-
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__about">
+          <div class="footer__logo">
+            <a href="index.html" class="footer__logo-link">
+              <img
+                alt=""
+                class="footer__logo-img"
+                src="assets/img/logo/maxlogo.png"
+              />
+            </a>
+          </div>
+          <ul class="footer__address">
+            <li class="footer__address-item">
+              <i class="fa fa-home"></i>Uzb, Tahkent
+            </li>
+            <li class="footer__address-item">
+              <i class="fa fa-phone-alt"></i>+998 91 166 21 25
+            </li>
+            <li class="footer__address-item">
+              <i class="fa fa-envelope"></i>mvip07@gmail.com
+            </li>
+          </ul>
+          <ul class="footer__social-nav">
+            <li class="footer__social-list">
+              <a href="#" class="footer__social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li class="footer__social-list">
+              <a href="#" class="footer__social-link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li class="footer__social-list">
+              <a href="#" class="footer__social-link"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+            <li class="footer__social-list">
+              <a href="#" class="footer__social-link"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__menu">
+        <h4 class="footer__nav-title">INFORMATION</h4>
+        <ul class="footer__nav">
+          <li class="footer__list">
+            <a href="" class="footer__link">Delivery Information</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Advanced Search</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Helps & Faqs</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Store Location</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Orders & Returns</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Deliveries</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link"> Refund & Returns</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__menu">
+        <h4 class="footer__nav-title">OUR COMPANY</h4>
+        <ul class="footer__nav">
+          <li class="footer__list">
+            <a href="" class="footer__link">Delivery</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Legal Notice</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Sitemap</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Secure payment</a>
+          </li>
+          <li class="footer__list"><a href="" class="footer__link">Blog</a></li>
+          <li class="footer__list">
+            <a href="" class="footer__link">About us</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Carrers</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__menu">
+        <h4 class="footer__nav-title">MY ACCOUNT</h4>
+        <ul class="footer__nav">
+          <li class="footer__list">
+            <a href="" class="footer__link">Search Terms</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Advanced Search</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Helps & Faqs</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Store Location</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Orders & Returns</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Deliveries</a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__link">Refund & Returns</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__menu">
+        <h4 class="footer__nav-title">OPENING TIME</h4>
+        <ul class="footer__nav">
+          <li class="footer__list">Mon - Fri: 8AM - 10PM</li>
+          <li class="footer__list">Sat: 9AM-8PM</li>
+          <li class="footer__list">Suns: 14hPM-18hPM</li>
+          <li class="footer__list">Mon - Fri: 8AM - 10PM</li>
+          <li class="footer__list">We Work All The Holidays</li>
+          <li class="footer__list">
+            <a href="#" class="footer__link font--bold">Download our app</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script src="./assets/js/toggle.js"></script>
+  <script src="./assets/js/index.js" type="module"></script>
 </html>

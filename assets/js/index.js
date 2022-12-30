@@ -1,131 +1,131 @@
-/* BU qismda ob-havo vaqtlarini ko'rsati beruvchi code qismi*/
-let geo = navigator.geolocation;
-let apiBase = "https://api.openweathermap.org/data/2.5";
-let apiKey = "de3ae2261305416619b29ff9f5edc781";
-const Product = document.querySelector(".product__catagory");
-geo.getCurrentPosition(function (position) {
-  const { longitude, latitude } = position.coords;
+import ERROR from "./error.js"
+import LOADER from "./loader.js"
+const APIBASE = "https://api.openweathermap.org/data/2.5";
+const APIBASEPRAYER = "http://api.aladhan.com/v1/calendarByAddress"
+const APIKEY = "de3ae2261305416619b29ff9f5edc781";
+const GEO = navigator.geolocation;
+const WEATHER = document.querySelector(".weather__catagory");
 
-  fetch(
-    `${apiBase}/onecall?lat=${latitude}&lon=${longitude}&exclude=current&appid=${apiKey}&units=metric`
-  )
-    .then((data) => data.json())
-    .then((weather) => {
-      let weatherDaily = weather.daily;
+let TODAY = new Date();
+let MONTH = `${TODAY.getMonth() + 1 < 10 ? "0" : " "}${TODAY.getMonth() + 1}`;
+let YEARS = `${TODAY.getFullYear()}`;
+const PRAYER = document.querySelector(".prayer-default-slider");
+const SELECT = document.querySelector(".select")
 
-      for (let i of weatherDaily) {
-        var dayname = new Date(i.dt * 1000).toLocaleDateString({ weekday: "" });
+GEO.getCurrentPosition(function (position) {
+	const { longitude, latitude } = position.coords;
 
-        const productCatagory = document.createElement("div");
-        productCatagory.classList.add("product__catagory--single");
+	fetch(`${APIBASE}/onecall?lat=${latitude}&lon=${longitude}&exclude=current&appid=${APIKEY}&units=metric`)
+		.then((data) => data.json())
+		.then((weather) => { WEATHERFUNCTION(weather.daily); LOADER() })
+		.catch(err => { ERROR(WEATHER);  LOADER()})
 
-        const ProductContent = document.createElement("div");
-        //ProductContent.classList.add("product__content product__content--catagory")
-        ProductContent.innerHTML = `
-                <p class="product__link">Sana: ${dayname}</p>
-                <p class="product__link">Max: ${i.temp.max}</p>
-                <span class="product__items--text">Min: ${i.temp.min}</span>
-            `;
+	fetch(`${APIBASEPRAYER}?address=%20${latitude},%20${longitude}&method=2&month=${MONTH}&year=${YEARS}`)
+		.then((response) => response.json())
+		.then((prayer) => { PRAYERFUNCTION(prayer.data); CHOOSEBUTTON(prayer.data); SELECTDATEFUNCTION(prayer.data); LOADER() })
+		.catch(err => { ERROR(PRAYER); LOADER() })
+})
 
-        const ProductImgBox = document.createElement("div");
-        //ProductImgBox.classList.add("product__img-box product__img-box--catagory")
-        ProductImgBox.innerHTML = `
-                <p class="product__img--link">
-                    <img class="product__img img-fluid" src="http://openweathermap.org/img/wn/${i.weather[0].icon}.png" alt="">
-                    <p class="product__link">${i.weather[0].main}</p>
-                </p>
-            `;
+function WEATHERFUNCTION(WEATHERRES) {
+	for (let i of WEATHERRES) {
+		var DAYNAME = new Date(i.dt * 1000).toLocaleDateString({ weekday: "" });
 
-        productCatagory.append(ProductContent, ProductImgBox);
-        Product.append(productCatagory);
-      }
-    });
-});
+		const WEATHERCATEGORY = document.createElement("div")
+		WEATHERCATEGORY.classList.add("weather__catagory--single");
 
-/* BU qismda namoz vaqtlarini ko'rsati beruvchi code qismi*/
-const ProductBox = document.querySelector("#product-default-slider");
-let today = new Date();
-let month = `${today.getMonth() + 1 < 10 ? "0" : " "}${today.getMonth() + 1}`;
-let year = `${today.getFullYear()}`;
+		const WEATHERLINKS = document.createElement("div");
+		WEATHERLINKS.innerHTML = `
+			<p class="weather__link">Date: ${DAYNAME}</p>
+			<p class="weather__link">Max: ${i.temp.max}</p>
+			<p class="weather__link">Min: ${i.temp.min}</p>
+        `;
 
-geo.getCurrentPosition(function (position) {
-  const { longitude, latitude } = position.coords;
+		const WEATHERIMAGES = document.createElement("div");
+		WEATHERIMAGES.innerHTML = `
+			<p class="weather__img--link">
+				<img class="weather__img" src="http://openweathermap.org/img/wn/${i.weather[0].icon}.png" alt="">
+				<p class="weather__link">${i.weather[0].main}</p>
+			</p>
+        `;
 
-  fetch(
-    `http://api.aladhan.com/v1/calendarByAddress?address=%20${latitude},%20${longitude}&method=2&month=${month}&year=${year}`
-  )
-    .then((response) => response.json())
-    .then((prayer) => {
-      let prayerDatas = prayer.data;
+		WEATHERCATEGORY.append(WEATHERLINKS, WEATHERIMAGES);
+		WEATHER.append(WEATHERCATEGORY);
+	}
+}
 
-      for (let prayerData of prayerDatas) {
-        const productContent = document.createElement("div");
-        productContent.classList.add("product__box"),
-          productContent.classList.add("product__default--single");
-        productContent.innerHTML = `
-            <div class="product__content">
-                <p class="product__link">${prayerData.date.hijri.date}</p>
-                <div class="product__price m-t-5">
-                    <span class="product__price">${prayerData.date.readable}</span>
-                </div>
+function PRAYERFUNCTION(PRAYERRES) {
+	PRAYER.innerHTML = ""
+	for (let i of PRAYERRES) {
+		let PRAYERDEFAULT = document.createElement("div")
+		PRAYERDEFAULT.classList.add("prayer__default--single")
+		PRAYERDEFAULT.innerHTML = `
+			<div class="prayer__date">
+				<p class="prayer__link">${i?.date.hijri.date}</p>
+				<span class="prayer__price">${i?.date.readable}</span>
+			</div>
 
-                <div class="product__times--time d-flex align-items-center justify-content-between p-1 mx-3">
-                    <p class="product__link">Bomdod:</p>
-                    <p class="product__link">${prayerData.timings.Fajr}</p>
-                </div>
+			<div class="prayer__times">
+				<p class="prayer__link">Fajr:</p>
+				<p class="prayer__link">${i?.timings.Fajr}</p>
+			</div>
 
-                <div class="product__times--time d-flex align-items-center justify-content-between p-1 mx-3">
-                    <p class="product__link">Quyosh chiqishi: </p>
-                    <p class="product__link">${prayerData.timings.Sunrise}</p>
-                </div>
+			<div class="prayer__times">
+				<p class="prayer__link">Sunrise: </p>
+				<p class="prayer__link">${i?.timings.Sunrise}</p>
+			</div>
 
-                <div class="product__times--time d-flex align-items-center justify-content-between p-1 mx-3">
-                    <p class="product__link">Peshin:</p>
-                    <p class="product__link">${prayerData.timings.Dhuhr}</p>
-                </div>
+			<div class="prayer__times">
+				<p class="prayer__link">Dhuhr:</p>
+				<p class="prayer__link">${i?.timings.Dhuhr}</p>
+			</div>
 
+			<div class="prayer__times">
+				<p class="prayer__link">Asr:</p>
+				<p class="prayer__link">${i?.timings.Asr}</p>
+			</div>
 
-                <div class="product__times--time d-flex align-items-center justify-content-between p-1 mx-3">
-                    <p class="product__link">Asr:</p>
-                    <p class="product__link">${prayerData.timings.Asr}</p>
-                </div>
+			<div class="prayer__times">
+				<p class="prayer__link">Maghrib</p>
+				<p class="prayer__link">${i?.timings.Maghrib}</p>
+			</div>
 
+			<div class="prayer__times">
+				<p class="prayer__link">Sunset:</p>
+				<p class="prayer__link">${i?.timings.Sunset}</p>
+			</div>
 
-                <div class="product__times--time d-flex align-items-center justify-content-between p-1 mx-3">
-                    <p class="product__link">Shom</p>
-                    <p class="product__link">${prayerData.timings.Maghrib}</p>
-                </div>
+			<div class="prayer__times">
+				<p class="prayer__link">Isha:</p>
+				<p class="prayer__link">${i?.timings.Isha}</p>
+			</div>
+	`;
+		PRAYER.appendChild(PRAYERDEFAULT);
+	}
+}
 
-                <div class="product__times--time d-flex align-items-center justify-content-between p-1 mx-3">
-                    <p class="product__link">Quyosh botishi:</p>
-                    <p class="product__link">${prayerData.timings.Sunset}</p>
-                </div>
+function CHOOSEBUTTON(PRAYERRES) {
+	const TODAYBTN = document.querySelector(".today")
+	const MONTH = document.querySelector(".month")
 
-                <div class="product__times--time d-flex align-items-center justify-content-between p-1 mx-3">
-                
-                    <p class="product__link">Xufton:</p>
-                    <p class="product__link">${prayerData.timings.Isha}</p>
-                </div>
-            </div>                        
-            `;
+	TODAYBTN.addEventListener("click", () => {
+		const DAY = new Date().getUTCDate()
+		PRAYERRES.filter((ITEMS) => (ITEMS.date.readable).substr(0, 2) == DAY ? PRAYERFUNCTION([ITEMS]) : "")
+	})
 
-        ProductBox.append(productContent);
-      }
-    });
-});
+	MONTH.addEventListener("click", () => PRAYERFUNCTION(PRAYERRES))
 
-let map = document.querySelectorAll("#map");
-geo.getCurrentPosition(function (position) {
-  const { latitude, longitude } = position.coords;
-  map = L?.map("map").setView([latitude, longitude], 15);
+	SELECT.addEventListener("input", ({ target }) => {
+		PRAYERRES.filter((ITEMS) => ITEMS.date.readable == target.value ? PRAYERFUNCTION([ITEMS]) : "")
+	})
+}
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  }).addTo(map);
+function SELECTDATEFUNCTION(PRAYERRES) {
+	for (let i of PRAYERRES) {
+		const OPTIONBOX = document.createElement("option")
 
-  L.marker([41.3264751, 69.2277542])
-    .addTo(map)
-    .bindPopup("Our headquarters")
-    .openPopup();
-});
+		OPTIONBOX.innerHTML = `${i.date.readable}`
+		OPTIONBOX.classList.add((i.date.readable).substr(0, 2))
+
+		SELECT.append(OPTIONBOX)
+	}
+}

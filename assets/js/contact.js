@@ -1,36 +1,31 @@
-const btn = document.querySelector('.btnSubmit')
-const form = document.querySelector('.form')
-const input = document.querySelectorAll('input')
-const textarea = document.querySelector('.msg')
+const BUTTON = document.querySelector('.btnSubmit')
+BUTTON.addEventListener('click', () => {
+	const NAME = document.querySelector('.name').value
+	const SUBJECT = document.querySelector('.subject').value
+	const EMAIL = document.querySelector('.email').value
+	const MSG = document.querySelector('.msg').value
 
-for (let i = 2; i < input.length; i++) {
+	if (NAME.trim() != "" && SUBJECT.trim() != "" && EMAIL.trim() != "" && MSG.trim() != "") {
+		alert("Thank you writing. See you next time")
+	} else alert("You are not writing")
+})
 
-    btn.addEventListener('click', () => {
-        const name = document.querySelector('.name').value
-        const subject = document.querySelector('.subject').value
-        const email = document.querySelector('.email').value
-        const msg = document.querySelector('.msg').value
+let GEO = navigator.geolocation;
+let map = document.querySelectorAll("#map");
 
-        if (name != "" && subject != "" && email != "" && msg != "") {
-            Email.send({
-                Host: "smtp.mailtrap.io",
-                Username: "b37cb8823c318c",
-                Password: "594af558936d76",
-                To: "mirabzalozodov07@gmail.com",
-                From: email,
-                Subject: "Contact Us Query By the Customer",
-                Body: `
-                   Name: ${name}; 
-                   Subject: ${subject}; 
-                   Email: ${email}; 
-                   Message: ${msg};
-            `
+GEO.getCurrentPosition(function (position) {
+	const { latitude, longitude } = position.coords;
+	map = L?.map("map").setView([latitude, longitude], 15);
 
-            }).then(msg => alert("The email successfully sent"))
-        }
+	L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+		attribution:
+			'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	}).addTo(map);
 
-        if (name == "" && subject == "" && email == "" && msg == "") alert("No data entered")
-        input[i].value = "";
-        textarea.value = ""
-    })
-}
+	L.marker([latitude, longitude])
+		.addTo(map)
+		.bindPopup("Your address")
+		.openPopup();
+});
+
+

@@ -1,0 +1,807 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 
+    ========= START HEADER SECTION ==========
+*/
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 50px;
+    border-bottom: 1px solid #323232;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo,
+.header__mobile-logo {
+    width: 90px;
+}
+
+.header__logo img,
+.header__mobile-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.header__nav-link {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    color: #323232;
+}
+
+
+.header__nav-link::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0px;
+    left: auto;
+    right: 0;
+    transition: all 0.3s ease;
+}
+
+.header__nav-item:hover .header__nav-link {
+    color: #89c74a;
+}
+
+.header__nav-item:hover .header__nav-link::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+    background-color: #89c74a;
+}
+
+.header__mobile,
+.offcanvas {
+    display: none;
+}
+
+.offcanvas.active {
+    display: block;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    border-right: 1px solid #323232;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .header__container {
+        display: none;
+    }
+
+    .header__mobile {
+        display: block;
+    }
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .offcanvas-toggle,
+    .offcanvas-close {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 25px;
+        color: #666;
+        background: none;
+    }
+
+    .offcanvas-close {
+        position: relative;
+        left: 90%;
+    }
+}
+
+/* ========= FINISH HEADER SECTION ========== */
+
+
+/* ========= START MAIN SECTION ========== */
+
+.hero .here-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slider img {
+    width: 100%;
+    height: 100%;
+}
+
+.weather {
+    position: relative;
+    padding: 30px 100px;
+}
+
+.section-content {
+    border-bottom: 2px solid #ebebeb;
+}
+
+.section-content .section-content__title {
+    font-size: 25px;
+    line-height: 35px;
+    color: #222;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.weather__catagory {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.weather__catagory--single {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    float: left;
+    width: 100%;
+    padding: 7px 10px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    transition: 0.5s;
+    overflow: hidden;
+    min-height: 120px;
+    margin-top: 20px;
+}
+
+.weather__catagory--single:hover {
+    z-index: 2;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+}
+
+.weather__catagory .weather__link {
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.weather__content--catagory {
+    width: 60%;
+    padding: 10px;
+}
+
+.weather__img-box--catagory {
+    width: 40%;
+}
+
+
+.prayer {
+    padding: 30px 100px;
+}
+
+.prayer-day-choose {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.prayer-day-choose button, .prayer-day-choose select {
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    background-color: #89c74a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.prayer-day-choose select option {
+    background-color: #323232;
+}
+
+.prayer-day-choose select::-webkit-scrollbar {
+    display: none;
+}
+
+.prayer-default-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.prayer__default--single {
+    width: 100%;
+    padding: 7px 10px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    transition: 0.5s;
+    overflow: hidden;
+    min-height: 120px;
+    margin-top: 20px;
+}
+
+.prayer__date {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.prayer__date p {
+    font-size: 14px;
+    color: #323232;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.prayer__date span {
+    font-size: 16px;
+    font-weight: 800;
+    color: #89c74a;
+}
+
+.prayer__times {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.prayer__times:hover {
+    color: #89c74a;
+}
+
+.error-section {
+    padding: 30px 100px;
+    border-top: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+}
+
+.error-section-top,
+.page-not-found {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.error-section-top h2 {
+    font-size: 100px;
+    color: #79a206;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.error-section-top h4 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #323232;
+    margin-bottom: 20px;
+}
+
+.error-section-top h5 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #323232;
+}
+
+.page-not-found .btn {
+    color: #fff;
+    margin: 40px 0;
+    padding: 12px 24px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #89c74a;
+}
+
+.page-not-found .btn:hover {
+    color: #fff;
+    background-color: #222;
+    transition: all .5s ease;
+}
+
+@media (max-width: 768px) {
+
+    .weather,
+    .prayer,
+    .error-section {
+        padding: 30px;
+    }
+}
+
+/* ========= FINISH MAIN SECTION ========== */
+
+
+/* ========= START FOOTER SECTION ========== */
+
+footer {
+    margin-top: 50px;
+    padding: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 35px;
+}
+
+.footer__about .footer__logo {
+    width: 100px;
+    height: 60px;
+}
+
+.footer__about .footer__logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer__address .footer__address-item {
+    font-size: 14;
+    display: flex;
+    margin: 10px 0;
+    font-weight: 500;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer__address .footer__address-item .fa {
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.footer__social-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__social-nav .footer__social-list {
+    width: 40px;
+    display: block;
+    font-size: 15px;
+    padding: 10px 0;
+    color: #323232;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #ebebeb;
+}
+
+.footer__nav-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer__nav .footer__list,
+a {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer__nav .footer__list a:hover {
+    font-size: 18px;
+    margin-left: 10px;
+    color: #89c74a !important;
+}
+
+/* ========= FINISH FOOTER SECTION ========== */
+
+
+/* ========= START ABOUT SECTION ========== */
+
+.about-top {
+    padding: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-img {
+    width: 100%;
+    height: 400px;
+}
+
+.about-img .img-responsive img {
+    width: 100%;
+    height: 400px;
+}
+
+.about-content .font--regular {
+    font-size: 24px;
+    font-weight: 500;
+    color: #323232;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.about-content .para__text {
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.about-content .btn {
+    gap: 20px;
+    width: 200px;
+    display: flex;
+    color: #89c74a;
+    padding: 10px 24px;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid #89c74a;
+}
+
+.about-content .btn i {
+    margin-top: 5px;
+}
+
+.cms {
+    padding: 30px 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.cms__text .cms__title {
+    font-size: 22px;
+    color: #323232;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cms__text .para__text {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media (max-width: 1024px) {
+    .about-top {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-top {
+        padding: 100px 20px;
+    }
+
+    .cms {
+        padding: 0 20px;
+    }
+}
+
+/* ========= FINISH ABOUT SECTION ========== */
+
+
+/* ========= START CONTACT SECTION ========== */
+
+.footer {
+    width: 100%;
+    height: 100%;
+    padding: 100px 200px;
+    position: relative;
+}
+
+.footer .contact-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+}
+
+.contact-map #map {
+    width: 100%;
+    height: 100%;
+}
+
+.container-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 450px;
+    align-items: flex-start;
+
+}
+
+.contact-info-wrap {
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+    background-color: #eef1f0;
+}
+
+.single-contact-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.single-contact-info .contact-icon {
+    padding: 8px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.single-contact-info .contact-info-dec a {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contact-social h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.contact-social .social-link {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-social .social-link a {
+    font-size: 20px;
+}
+
+.contact-form {
+    width: 70%;
+    height: 550px;
+    padding: 30px;
+    background-color: #eef1f0;
+}
+
+.section-content .section-content__title {
+    font-size: 36px;
+    color: #323232;
+    line-height: 36px;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.form-box__single-group {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.form .form-box__single-group input {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+}
+
+.form .form-box__single-group input::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.form .form-box__single-group textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 200px;
+    padding: 10px 20px;
+    resize: none;
+}
+
+.form .form-box__single-group .btnSubmit {
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 170px;
+    padding: 12px 32px;
+    border-radius: 5px;
+    background-color: #222;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.form .form-box__single-group .btnSubmit:hover {
+    background-color: #89c74a;
+}
+
+@media (max-width: 1300px) {
+    .footer {
+        width: 100%;
+        height: 100%;
+        padding: 100px 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container-grid {
+        display: block;
+    }
+
+    .contact-info-wrap,
+    .contact-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* ========= FINISH CONTACT SECTION ========== */
+
+
+/* ========= START ALQURAN SECTION ========== */
+
+@media (min-width: 1200px) {
+    .accordion {
+        padding: 0 150px;
+        position: relative;
+    }
+}
+
+.contentBx {
+    position: relative;
+}
+
+.contentBx:nth-child(even) {
+    margin: 10px 0;
+}
+
+.label {
+    cursor: pointer;
+    color: #ffffff;
+    text-align: right;
+    margin-top: 5px;
+    padding: 20px 40px;
+    position: relative;
+    border-radius: 40px;
+    border: 1px solid #dee2e6;
+    background-color: #89c74a;
+}
+
+.contentBx .label::before {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    content: "+";
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.contentBx.active .label::before {
+    content: "-";
+}
+
+.contentBx.active .label {
+    border-radius: 40px 40px 0 0;
+}
+
+.contentBx .content {
+    padding: 0 40px;
+    height: 0;
+    overflow-y: auto;
+    transition: 0.5s;
+    position: relative;
+    background-color: #fff;
+}
+
+.contentBx.active .content {
+    height: 100%;
+    padding: 30px;
+    border-left: 1px solid #89c74a;
+    border-right: 1px solid #89c74a;
+    border-bottom: 1px solid #89c74a;
+}
+
+.content b {
+    display: block;
+    font-size: 30px;
+    color: #79a206;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.content span {
+    display: block;
+    font-size: 20px;
+    color: #79a206;
+    font-weight: 500;
+    text-align: right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* ========= FINISH ALQURAN SECTION ========== */
+
+
+/* ========= START LOADER SECTION ========== */
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.loader div {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation: lds-facebook 3s ease-in-out infinite;
+
+}
+
+.loader div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.48s;
+}
+
+.loader div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.36s;
+}
+
+.loader div:nth-child(3) {
+    left: 56px;
+    animation-delay: -0.24s;
+}
+
+.loader div:nth-child(4) {
+    left: 70px;
+    animation-delay: -0.12s;
+}
+
+
+@keyframes lds-facebook {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ========= FINISH LOADER SECTION ========== */
