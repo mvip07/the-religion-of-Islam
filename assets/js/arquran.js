@@ -23,7 +23,7 @@ function QURANFUNCTION(QURANRES) {
             <div class="content">
                 <b>${QURANRES[QURANITEMS]?.number}</b>
                 ${
-                    QURANRES[QURANITEMS]?.ayahs.map(({ text }) => `<span>${text}</span>`)
+                    QURANRES[QURANITEMS]?.ayahs.map(({ text }) => `<span>${text}</span>`).join("")
                 }
             </div >
             </div >

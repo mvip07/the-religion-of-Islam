@@ -746,6 +746,7 @@ a {
 .content span {
     display: block;
     font-size: 20px;
+    margin-top: 10px;
     color: #79a206;
     font-weight: 500;
     text-align: right;
