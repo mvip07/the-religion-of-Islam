@@ -1,6 +1,6 @@
 export default function ERROR(WEATHER) {
 	WEATHER.innerHTML = `
-		<div class="error-section">
+		<div class="error-section" id="error">
             <div class="error-section-top">
                 <h2>404</h2>
                 <h4>OOOPS! ERROR 404</h4>

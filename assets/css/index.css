@@ -1,9 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
     list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -16,10 +16,10 @@ body {
 */
 
 header {
-    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
+    position: sticky;
     padding: 10px 50px;
     border-bottom: 1px solid #323232;
     background: rgba(255, 255, 255, 0.9);
@@ -48,23 +48,23 @@ nav ul {
 }
 
 .header__nav-link {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    line-height: 60px;
-    text-transform: uppercase;
     font-weight: 600;
-    position: relative;
     color: #323232;
+    line-height: 60px;
+    position: relative;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
 .header__nav-link::after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 0%;
-    bottom: 0px;
-    left: auto;
     right: 0;
+    width: 0%;
+    left: auto;
+    height: 2px;
+    bottom: 0px;
+    content: "";
+    position: absolute;
     transition: all 0.3s ease;
 }
 
@@ -73,8 +73,8 @@ nav ul {
 }
 
 .header__nav-item:hover .header__nav-link::after {
-    width: 100%;
     left: 0;
+    width: 100%;
     right: auto;
     background-color: #89c74a;
 }
@@ -85,16 +85,16 @@ nav ul {
 }
 
 .offcanvas.active {
-    display: block;
+    top: 0;
+    left: 0;
     width: 300px;
     height: 100%;
     padding: 20px;
-    border-right: 1px solid #323232;
-    background-color: #ffffff;
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: 1000;
+    display: block;
+    position: fixed;
+    background-color: #ffffff;
+    border-right: 1px solid #323232;
 }
 
 @media (max-width: 768px) {
@@ -114,17 +114,17 @@ nav ul {
 
     .offcanvas-toggle,
     .offcanvas-close {
-        outline: none;
         border: none;
+        color: #666;
+        outline: none;
         cursor: pointer;
         font-size: 25px;
-        color: #666;
         background: none;
     }
 
     .offcanvas-close {
-        position: relative;
         left: 90%;
+        position: relative;
     }
 }
 
@@ -153,32 +153,32 @@ nav ul {
 }
 
 .section-content .section-content__title {
-    font-size: 25px;
-    line-height: 35px;
     color: #222;
+    font-size: 25px;
     font-weight: 400;
-    text-transform: capitalize;
+    line-height: 35px;
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 
 .weather__catagory {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .weather__catagory--single {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     float: left;
     width: 100%;
-    padding: 7px 10px;
-    background: #fff;
-    border: 1px solid #ebebeb;
+    display: flex;
     transition: 0.5s;
     overflow: hidden;
-    min-height: 120px;
     margin-top: 20px;
+    min-height: 120px;
+    padding: 7px 10px;
+    background: #fff;
+    align-items: center;
+    border: 1px solid #ebebeb;
+    justify-content: space-between;
 }
 
 .weather__catagory--single:hover {
@@ -200,22 +200,22 @@ nav ul {
     width: 40%;
 }
 
-
 .prayer {
     padding: 30px 100px;
 }
 
 .prayer-day-choose {
+    gap: 20px;
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
-.prayer-day-choose button, .prayer-day-choose select {
-    margin: 20px 0;
+.prayer-day-choose button,
+.prayer-day-choose select {
     border: none;
     outline: none;
     color: #fff;
+    margin: 20px 0;
     font-size: 17px;
     font-weight: 500;
     padding: 8px 16px;
@@ -234,20 +234,20 @@ nav ul {
 }
 
 .prayer-default-slider {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .prayer__default--single {
     width: 100%;
-    padding: 7px 10px;
-    background: #fff;
-    border: 1px solid #ebebeb;
     transition: 0.5s;
     overflow: hidden;
-    min-height: 120px;
     margin-top: 20px;
+    padding: 7px 10px;
+    min-height: 120px;
+    background: #fff;
+    border: 1px solid #ebebeb;
 }
 
 .prayer__date {
@@ -271,9 +271,9 @@ nav ul {
 
 .prayer__times {
     display: flex;
+    margin: 20px 0;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 0;
 }
 
 .prayer__times:hover {
@@ -317,9 +317,9 @@ nav ul {
     margin: 40px 0;
     padding: 12px 24px;
     border-radius: 3px;
-    text-transform: uppercase;
-    display: inline-block;
     background: #89c74a;
+    display: inline-block;
+    text-transform: uppercase;
 }
 
 .page-not-found .btn:hover {
@@ -329,10 +329,9 @@ nav ul {
 }
 
 @media (max-width: 768px) {
-
     .weather,
-    .prayer,
-    .error-section {
+        .prayer,
+        .error-section {
         padding: 30px;
     }
 }
@@ -343,12 +342,12 @@ nav ul {
 /* ========= START FOOTER SECTION ========== */
 
 footer {
-    margin-top: 50px;
-    padding: 30px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 35px;
+    width: 100%;
+    padding: 30px;
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .footer__about .footer__logo {
@@ -376,9 +375,9 @@ footer {
 }
 
 .footer__social-nav {
+    gap: 20px;
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
 .footer__social-nav .footer__social-list {
@@ -400,8 +399,7 @@ footer {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.footer__nav .footer__list,
-a {
+.footer__nav .footer__list, a {
     color: #666;
     font-size: 14px;
     margin-bottom: 10px;
@@ -421,12 +419,12 @@ a {
 /* ========= START ABOUT SECTION ========== */
 
 .about-top {
-    padding: 100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 100px;
-    justify-content: space-between;
+    display: grid;
+    padding: 100px;
     align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .about-img {
@@ -471,10 +469,10 @@ a {
 }
 
 .cms {
-    padding: 30px 100px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    display: grid;
+    padding: 30px 100px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .cms__text .cms__title {
@@ -517,17 +515,17 @@ a {
 .footer {
     width: 100%;
     height: 100%;
-    padding: 100px 200px;
     position: relative;
+    padding: 100px 200px;
 }
 
 .footer .contact-map {
-    position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: 500px;
-    z-index: -1;
+    position: absolute;
 }
 
 .contact-map #map {
@@ -536,11 +534,10 @@ a {
 }
 
 .container-grid {
-    display: flex;
     gap: 20px;
+    display: flex;
     margin-top: 450px;
     align-items: flex-start;
-
 }
 
 .contact-info-wrap {
@@ -551,14 +548,14 @@ a {
 }
 
 .single-contact-info {
+    gap: 10px;
     display: flex;
     align-items: flex-start;
-    gap: 10px;
 }
 
 .single-contact-info .contact-icon {
-    padding: 8px;
     width: 40px;
+    padding: 8px;
     text-align: center;
     border-radius: 50%;
     border: 1px solid #ddd;
@@ -578,10 +575,10 @@ a {
 }
 
 .contact-social .social-link {
+    gap: 30px;
     display: flex;
     margin-top: 20px;
     align-items: center;
-    gap: 30px;
 }
 
 .contact-social .social-link a {
@@ -612,8 +609,8 @@ a {
 .form .form-box__single-group input {
     width: 100%;
     height: 100%;
-    padding: 20px;
     border: none;
+    padding: 20px;
     outline: none;
 }
 
@@ -626,10 +623,10 @@ a {
 .form .form-box__single-group textarea {
     width: 100%;
     border: none;
+    resize: none;
     outline: none;
     height: 200px;
     padding: 10px 20px;
-    resize: none;
 }
 
 .form .form-box__single-group .btnSubmit {
@@ -691,9 +688,9 @@ a {
 
 .label {
     cursor: pointer;
+    margin-top: 5px;
     color: #ffffff;
     text-align: right;
-    margin-top: 5px;
     padding: 20px 40px;
     position: relative;
     border-radius: 40px;
@@ -702,11 +699,11 @@ a {
 }
 
 .contentBx .label::before {
-    position: absolute;
     top: 50%;
     left: 20px;
     content: "+";
     font-size: 1.5rem;
+    position: absolute;
     transform: translateY(-50%);
 }
 
@@ -719,8 +716,8 @@ a {
 }
 
 .contentBx .content {
-    padding: 0 40px;
     height: 0;
+    padding: 0 40px;
     overflow-y: auto;
     transition: 0.5s;
     position: relative;
@@ -759,19 +756,17 @@ a {
 /* ========= START LOADER SECTION ========== */
 
 .loader {
+    gap: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 }
-
 
 .loader div {
     font-size: 50px;
     font-weight: 900;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     animation: lds-facebook 3s ease-in-out infinite;
-
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .loader div:nth-child(1) {
@@ -793,7 +788,6 @@ a {
     left: 70px;
     animation-delay: -0.12s;
 }
-
 
 @keyframes lds-facebook {
     0% {

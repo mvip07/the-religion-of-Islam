@@ -20,7 +20,7 @@ GEO.getCurrentPosition(function (position) {
 		.then((weather) => { WEATHERFUNCTION(weather.daily); LOADER() })
 		.catch(err => { ERROR(WEATHER);  LOADER()})
 
-	fetch(`${APIBASEPRAYER}${YEARS}/${MONTH}?latitude=${latitude}&longitude=${longitude}&method=2`)
+	fetch(`${APIBASEPRAYER}${YEARS}/${MONTH}?latitud=${latitude}&longitude=${longitude}&method=2`)
 		.then((response) => response.json())
 		.then((prayer) => { PRAYERFUNCTION(prayer.data); CHOOSEBUTTON(prayer.data); SELECTDATEFUNCTION(prayer.data); LOADER() })
 		.catch(err => { ERROR(PRAYER); LOADER() })
