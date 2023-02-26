@@ -1,281 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Weather and Prayer times</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="upgrade-insecure-requests"
-    />
-    <!-- ::::::::::::::Favicon icon::::::::::::::-->
-    <link
-      href="./assets/img/logo/minlogo.png"
-      rel="shortcut icon"
-      type="image/png"
-    />
-    <link rel="stylesheet" href="./assets/css/vendor/fontawesome.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="header__container">
-        <div class="header__logo">
-          <a class="header__logo-link" href="index.html">
-            <img
-              alt=""
-              class="header__logo-img"
-              src="./assets/img/logo/maxlogo.png"
-            />
-          </a>
-        </div>
-        <nav>
-          <ul class="header__nav">
-            <!--Start Single Nav link-->
-            <li class="header__nav-item">
-              <a href="index.html" class="header__nav-link">Home</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="about.html" class="header__nav-link">About Us</a>
-            </li>
+<head>
+	<meta charset="UTF-8" />
+	<title>Weather and Prayer times</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+	<!-- ::::::::::::::Favicon icon::::::::::::::-->
+	<link href="./assets/img/logo/minlogo.png" rel="shortcut icon" type="image/png" />
+	<link rel="stylesheet" href="./assets/css/vendor/fontawesome.css" />
+	<link rel="stylesheet" href="./assets/css/index.css" />
+</head>
 
-            <li class="header__nav-item">
-              <a href="contact.html" class="header__nav-link">Contact Us</a>
-            </li>
+<body>
+	<header>
+		<div class="header__container">
+			<div class="header__logo">
+				<a class="header__logo-link" href="index.html">
+					<img alt="" class="header__logo-img" src="./assets/img/logo/maxlogo.png" />
+				</a>
+			</div>
+			<nav>
+				<ul class="header__nav">
+					<!--Start Single Nav link-->
+					<li class="header__nav-item">
+						<a href="index.html" class="header__nav-link">Home</a>
+					</li>
+					<li class="header__nav-item">
+						<a href="about.html" class="header__nav-link">About Us</a>
+					</li>
 
-            <li class="header__nav-item">
-              <a href="arquran.html" class="header__nav-link">The Holy Quran</a>
-            </li>
-          </ul>
-        </nav>
+					<li class="header__nav-item">
+						<a href="contact.html" class="header__nav-link">Contact Us</a>
+					</li>
 
-        <ul class="header__user-action-icon"></ul>
-      </div>
+					<li class="header__nav-item">
+						<a href="arquran.html" class="header__nav-link">The Holy Quran</a>
+					</li>
+				</ul>
+			</nav>
 
-      <div class="header__mobile">
-        <div class="container-fluid">
-          <div class="header__mobile-logo">
-            <a href="index.html" class="header__mobile-logo-link">
-              <img
-                alt=""
-                class="header__logo-img"
-                src="assets/img/logo/maxlogo.png"
-              />
-            </a>
-          </div>
-          <a href="#" class="offcanvas-toggle">
-            <i class="far fa-bars"></i>
-          </a>
-        </div>
-      </div>
+			<ul class="header__user-action-icon"></ul>
+		</div>
 
-      <div class="offcanvas">
-        <button class="offcanvas-close">
-          <i class="fal fa-times"></i>
-        </button>
+		<div class="header__mobile">
+			<div class="container-fluid">
+				<div class="header__mobile-logo">
+					<a href="index.html" class="header__mobile-logo-link">
+						<img alt="" class="header__logo-img" src="assets/img/logo/maxlogo.png" />
+					</a>
+				</div>
+				<a href="#" class="offcanvas-toggle">
+					<i class="far fa-bars"></i>
+				</a>
+			</div>
+		</div>
 
-        <div class="offcanvas-inner">
-          <div class="offcanvas-menu">
-            <ul>
-              <li class="header__nav-item">
-                <a href="index.html" class="header__nav-link">Home</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="about.html" class="header__nav-link">About Us</a>
-              </li>
+		<div class="offcanvas">
+			<button class="offcanvas-close">
+				<i class="fal fa-times"></i>
+			</button>
 
-              <li class="header__nav-item">
-                <a href="contact.html" class="header__nav-link">Contact Us</a>
-              </li>
+			<div class="offcanvas-inner">
+				<div class="offcanvas-menu">
+					<ul>
+						<li class="header__nav-item">
+							<a href="index.html" class="header__nav-link">Home</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="about.html" class="header__nav-link">About Us</a>
+						</li>
 
-              <li class="header__nav-item">
-                <a href="arquran.html" class="header__nav-link"
-                  >The Holy Quran</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
+						<li class="header__nav-item">
+							<a href="contact.html" class="header__nav-link">Contact Us</a>
+						</li>
 
-    <main class="main-container">
-      <div class="hero">
-        <div class="hero-slider">
-          <img
-            src="https://p4.wallpaperbetter.com/wallpaper/134/37/127/seasons-spring-summer-winter-wallpaper-preview.jpg"
-            alt=""
-          />
-        </div>
-      </div>
+						<li class="header__nav-item">
+							<a href="arquran.html" class="header__nav-link">The Holy Quran</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
 
-      <div class="weather">
-        <div class="section-content">
-          <h5 class="section-content__title">Weather times are 8 days</h5>
-        </div>
+	<main class="main-container">
+		<div class="hero">
+			<div class="hero-slider">
+				<img src="https://p4.wallpaperbetter.com/wallpaper/134/37/127/seasons-spring-summer-winter-wallpaper-preview.jpg"
+					alt="" />
+			</div>
+		</div>
 
-        <div class="weather__catagory"></div>
-      </div>
+		<div class="weather">
+			<div class="section-content">
+				<h5 class="section-content__title">Weather times are 8 days</h5>
+			</div>
 
-      <div class="prayer">
-        <div class="section-content">
-          <h5 class="section-content__title">Prayer times are 30 days</h5>
-        </div>
-        <div class="prayer-day-choose">
-          <button class="today">Today</button>
-          <button class="month">Month</button>
-          <select class="select"></select>
-        </div>
-        <div class="prayer-default-slider"></div>
-      </div>
-    </main>
-    <div class="loader">
-      <div>M</div>
-      <div>V</div>
-      <div>I</div>
-      <div>P</div>
-    </div>
+			<div class="weather__catagory"></div>
+		</div>
 
-    <footer class="footer">
-      <div class="footer__top">
-        <div class="footer__about">
-          <div class="footer__logo">
-            <a href="index.html" class="footer__logo-link">
-              <img
-                alt=""
-                class="footer__logo-img"
-                src="assets/img/logo/maxlogo.png"
-              />
-            </a>
-          </div>
-          <ul class="footer__address">
-            <li class="footer__address-item">
-              <i class="fa fa-home"></i>Uzb, Tahkent
-            </li>
-            <li class="footer__address-item">
-              <i class="fa fa-phone-alt"></i>+998 91 166 21 25
-            </li>
-            <li class="footer__address-item">
-              <i class="fa fa-envelope"></i>mvip07@gmail.com
-            </li>
-          </ul>
-          <ul class="footer__social-nav">
-            <li class="footer__social-list">
-              <a href="#" class="footer__social-link"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-            </li>
-            <li class="footer__social-list">
-              <a href="#" class="footer__social-link"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            </li>
-            <li class="footer__social-list">
-              <a href="#" class="footer__social-link"
-                ><i class="fab fa-youtube"></i
-              ></a>
-            </li>
-            <li class="footer__social-list">
-              <a href="#" class="footer__social-link"
-                ><i class="fab fa-google-plus-g"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__menu">
-        <h4 class="footer__nav-title">INFORMATION</h4>
-        <ul class="footer__nav">
-          <li class="footer__list">
-            <a href="" class="footer__link">Delivery Information</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Advanced Search</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Helps & Faqs</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Store Location</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Orders & Returns</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Deliveries</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link"> Refund & Returns</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__menu">
-        <h4 class="footer__nav-title">OUR COMPANY</h4>
-        <ul class="footer__nav">
-          <li class="footer__list">
-            <a href="" class="footer__link">Delivery</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Legal Notice</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Sitemap</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Secure payment</a>
-          </li>
-          <li class="footer__list"><a href="" class="footer__link">Blog</a></li>
-          <li class="footer__list">
-            <a href="" class="footer__link">About us</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Carrers</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__menu">
-        <h4 class="footer__nav-title">MY ACCOUNT</h4>
-        <ul class="footer__nav">
-          <li class="footer__list">
-            <a href="" class="footer__link">Search Terms</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Advanced Search</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Helps & Faqs</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Store Location</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Orders & Returns</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Deliveries</a>
-          </li>
-          <li class="footer__list">
-            <a href="" class="footer__link">Refund & Returns</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__menu">
-        <h4 class="footer__nav-title">OPENING TIME</h4>
-        <ul class="footer__nav">
-          <li class="footer__list">Mon - Fri: 8AM - 10PM</li>
-          <li class="footer__list">Sat: 9AM-8PM</li>
-          <li class="footer__list">Suns: 14hPM-18hPM</li>
-          <li class="footer__list">Mon - Fri: 8AM - 10PM</li>
-          <li class="footer__list">We Work All The Holidays</li>
-          <li class="footer__list">
-            <a href="#" class="footer__link font--bold">Download our app</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-  </body>
-  <script src="./assets/js/toggle.js"></script>
-  <script src="./assets/js/index.js" type="module"></script>
+		<div class="prayer">
+			<div class="section-content">
+				<h5 class="section-content__title">Prayer times are 30 days</h5>
+			</div>
+			<div class="prayer-day-choose">
+				<button class="today">Today</button>
+				<button class="month">Month</button>
+				<select class="select"></select>
+			</div>
+			<div class="prayer-default-slider"></div>
+		</div>
+	</main>
+	<div class="loader">
+		<div>M</div>
+		<div>V</div>
+		<div>I</div>
+		<div>P</div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="footer__about">
+				<div class="footer__logo">
+					<a href="index.html" class="footer__logo-link">
+						<img alt="" class="footer__logo-img" src="assets/img/logo/maxlogo.png" />
+					</a>
+				</div>
+				<ul class="footer__address">
+					<li class="footer__address-item">
+						<i class="fa fa-home"></i>Uzb, Tahkent
+					</li>
+					<li class="footer__address-item">
+						<i class="fa fa-phone-alt"></i>+998 91 166 21 25
+					</li>
+					<li class="footer__address-item">
+						<i class="fa fa-envelope"></i>mvip07@gmail.com
+					</li>
+				</ul>
+				<ul class="footer__social-nav">
+					<li class="footer__social-list">
+						<a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+					</li>
+					<li class="footer__social-list">
+						<a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+					</li>
+					<li class="footer__social-list">
+						<a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+					</li>
+					<li class="footer__social-list">
+						<a href="#" class="footer__social-link"><i class="fab fa-google-plus-g"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer__menu">
+			<h4 class="footer__nav-title">INFORMATION</h4>
+			<ul class="footer__nav">
+				<li class="footer__list">
+					<a href="" class="footer__link">Delivery Information</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Advanced Search</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Helps & Faqs</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Store Location</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Orders & Returns</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Deliveries</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link"> Refund & Returns</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__menu">
+			<h4 class="footer__nav-title">OUR COMPANY</h4>
+			<ul class="footer__nav">
+				<li class="footer__list">
+					<a href="" class="footer__link">Delivery</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Legal Notice</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Sitemap</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Secure payment</a>
+				</li>
+				<li class="footer__list"><a href="" class="footer__link">Blog</a></li>
+				<li class="footer__list">
+					<a href="" class="footer__link">About us</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Carrers</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__menu">
+			<h4 class="footer__nav-title">MY ACCOUNT</h4>
+			<ul class="footer__nav">
+				<li class="footer__list">
+					<a href="" class="footer__link">Search Terms</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Advanced Search</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Helps & Faqs</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Store Location</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Orders & Returns</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Deliveries</a>
+				</li>
+				<li class="footer__list">
+					<a href="" class="footer__link">Refund & Returns</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__menu">
+			<h4 class="footer__nav-title">OPENING TIME</h4>
+			<ul class="footer__nav">
+				<li class="footer__list">Mon - Fri: 8AM - 10PM</li>
+				<li class="footer__list">Sat: 9AM-8PM</li>
+				<li class="footer__list">Suns: 14hPM-18hPM</li>
+				<li class="footer__list">Mon - Fri: 8AM - 10PM</li>
+				<li class="footer__list">We Work All The Holidays</li>
+				<li class="footer__list">
+					<a href="#" class="footer__link font--bold">Download our app</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+</body>
+<script src="./assets/js/toggle.js"></script>
+<script src="./assets/js/index.js" type="module"></script>
+
 </html>

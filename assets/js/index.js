@@ -1,11 +1,11 @@
 import ERROR from "./error.js"
 import LOADER from "./loader.js"
 const APIBASE = "https://api.openweathermap.org/data/2.5";
-const APIBASEPRAYER = "http://api.aladhan.com/v1/calendarByAddress"
+const APIBASEPRAYER = "http://api.aladhan.com/v1/calendar/"
 const APIKEY = "de3ae2261305416619b29ff9f5edc781";
 const GEO = navigator.geolocation;
 const WEATHER = document.querySelector(".weather__catagory");
-
+// http://api.aladhan.com/v1/calendar/ http://api.aladhan.com/v1/calendar/2019?latitude=51.508515&longitude=-0.1254872&method=2
 let TODAY = new Date();
 let MONTH = `${TODAY.getMonth() + 1 < 10 ? "0" : " "}${TODAY.getMonth() + 1}`;
 let YEARS = `${TODAY.getFullYear()}`;
@@ -20,7 +20,7 @@ GEO.getCurrentPosition(function (position) {
 		.then((weather) => { WEATHERFUNCTION(weather.daily); LOADER() })
 		.catch(err => { ERROR(WEATHER);  LOADER()})
 
-	fetch(`${APIBASEPRAYER}?address=%20${latitude},%20${longitude}&method=2&month=${MONTH}&year=${YEARS}`)
+	fetch(`${APIBASEPRAYER}${YEARS}/${MONTH}?latitude=${latitude}&longitude=${longitude}&method=2`)
 		.then((response) => response.json())
 		.then((prayer) => { PRAYERFUNCTION(prayer.data); CHOOSEBUTTON(prayer.data); SELECTDATEFUNCTION(prayer.data); LOADER() })
 		.catch(err => { ERROR(PRAYER); LOADER() })
